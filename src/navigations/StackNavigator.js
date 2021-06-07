@@ -42,6 +42,7 @@ const PlacementStackNavigator = () => {
 }
 
 export {
+	MainStackNavigator,
 	HomeStackNavigator,
 	PlacementStackNavigator
 }
