@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 const Request = () => {
-	const [isLoading, setLoading] = useState(true);
-	const [data, setData] = useState([]);
+	const [loading, setLoading] = useState(true);
+	const [dataSource, setDataSource] = useState([]);
 
 	return (
-		<View>
-			<Text>Request</Text>
-		</View>
+		<TouchableOpacity>
+			<View>
+				<Text>Request</Text>
+			</View>
+		</TouchableOpacity>
 	);
 };
 

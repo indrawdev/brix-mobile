@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 const Splash = () => {
-	const [isLoading, setLoading] = useState(true);
-	const [data, setData] = useState([]);
+	const [loading, setLoading] = useState(true);
 
 	return (
 		<View>

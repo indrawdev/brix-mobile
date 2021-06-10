@@ -1,10 +1,16 @@
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Ionicons from 'react-native-vector-icons/Ionicons'
+import {
+	HomeStackNavigator,
+	ProspectStackNavigator,
+	MaintenanceStackNavigator,
+	PlacementStackNavigator
+} from './StackNavigator'
 
 const Tab = createBottomTabNavigator()
 
-const HomeBottomTab = () => {
+const BottomTabNavigator = () => {
 	return (
 		<Tab.Navigator
 			screenOptions={({ route }) => ({
@@ -12,13 +18,13 @@ const HomeBottomTab = () => {
 				tabBarIcon: ({ focused, color, size }) => {
 					let iconName
 
-					if (route.name === 'TabA') {
-						iconName = focused
-							? 'home'
-							: 'home-outline';
-					} else if (route.name === 'TabB') {
+					if (route.name === 'Home') {
+						iconName = focused ? 'home' : 'home-outline';
+					} else if (route.name === 'Prospect') {
 						iconName = focused ? 'mail' : 'mail-outline';
-					} else if (route.name === 'TabC') {
+					} else if (route.name === 'Maintenance') {
+						iconName = focused ? 'chatbubble-ellipses' : 'chatbubble-ellipses-outline';
+					} else if (route.name === 'Placement') {
 						iconName = focused ? 'chatbubble-ellipses' : 'chatbubble-ellipses-outline';
 					}
 
@@ -30,11 +36,12 @@ const HomeBottomTab = () => {
 				inactiveTintColor: 'gray',
 			}}
 		>
-			{/* <Tab.Screen name="TabA" component={HomeStackNavigator} />
-			<Tab.Screen name="TabB" component={TabBScreen} />
-			<Tab.Screen name="TabC" component={TabCScreen} /> */}
+			<Tab.Screen name="Home" component={HomeStackNavigator} />
+			<Tab.Screen name="Prospect" component={ProspectStackNavigator} />
+			<Tab.Screen name="Maintenance" component={MaintenanceStackNavigator} />
+			<Tab.Screen name="Placement" component={PlacementStackNavigator} />
 		</Tab.Navigator>
 	)
 }
 
-export { HomeBottomTab }
+export default BottomTabNavigator;
