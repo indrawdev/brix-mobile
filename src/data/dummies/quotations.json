@@ -1,0 +1,298 @@
+{
+	"success": true,
+	"data": {
+		"count": 97,
+		"rows": [
+			{
+				"placing_id": 136,
+				"quotation_code": "QUO21046",
+				"type_cover": "GHS",
+				"insured_person": 95,
+				"start_periode": "2021-04-01",
+				"end_periode": "2022-03-31",
+				"policy_number": "T.B.A",
+				"brokerage_pct": "15.00",
+				"currency": "IDR",
+				"proposal": {
+					"file_upload": ""
+				},
+				"request": {
+					"request_code": "RQS210050",
+					"business_type": "RB",
+					"type_cover": "GHS",
+					"allocated_budget": "190000000",
+					"pipeline": {
+						"pipeline_code": "PIP190136",
+						"company_type": "PT",
+						"company_name": "GLOBAL JAYA MEDIKA"
+					}
+				},
+				"insurance": {
+					"insurance_type": "PT",
+					"insurance_name": "Lippo General Insurance"
+				}
+			},
+			{
+				"placing_id": 135,
+				"quotation_code": "QUO21045",
+				"type_cover": "GPA",
+				"insured_person": 60,
+				"start_periode": "2021-05-28",
+				"end_periode": "2022-05-27",
+				"policy_number": "T.B.A",
+				"brokerage_pct": "27.50",
+				"currency": "IDR",
+				"proposal": {
+					"file_upload": ""
+				},
+				"request": {
+					"request_code": "RQS210071",
+					"business_type": "RB",
+					"type_cover": "GPA",
+					"allocated_budget": "12000000",
+					"pipeline": {
+						"pipeline_code": "PIP190194",
+						"company_type": "PT",
+						"company_name": "CIPTA KARYA MANFAAT MAKMUR"
+					}
+				},
+				"insurance": {
+					"insurance_type": "PT",
+					"insurance_name": "Chubb General"
+				}
+			},
+			{
+				"placing_id": 134,
+				"quotation_code": "QUO21044",
+				"type_cover": "GHS",
+				"insured_person": 312,
+				"start_periode": "2021-04-13",
+				"end_periode": "2022-04-12",
+				"policy_number": "T.B.A",
+				"brokerage_pct": "15.00",
+				"currency": "IDR",
+				"proposal": {
+					"file_upload": "061263e50ae8d1521e2aaaa94296f181.pdf"
+				},
+				"request": {
+					"request_code": "RQS210025",
+					"business_type": "RB",
+					"type_cover": "GHS",
+					"allocated_budget": "230000000",
+					"pipeline": {
+						"pipeline_code": "PIP190198",
+						"company_type": "PT",
+						"company_name": "NES GLOBAL TEKNIK"
+					}
+				},
+				"insurance": {
+					"insurance_type": "PT",
+					"insurance_name": "Asuransi AXA Indonesia"
+				}
+			},
+			{
+				"placing_id": 133,
+				"quotation_code": "QUO21042",
+				"type_cover": "GHS",
+				"insured_person": 100,
+				"start_periode": "2021-04-26",
+				"end_periode": "2022-04-26",
+				"policy_number": "21045BRIXUAT7 - 26042021",
+				"brokerage_pct": "5.00",
+				"currency": "IDR",
+				"proposal": {
+					"file_upload": "5e30bdc523b0adc20730df1615866063.pdf"
+				},
+				"request": {
+					"request_code": "RQS210066",
+					"business_type": "INR",
+					"type_cover": "GHS",
+					"allocated_budget": "527600000",
+					"pipeline": {
+						"pipeline_code": "PIP210026",
+						"company_type": "PT",
+						"company_name": "BRIXUAT7"
+					}
+				},
+				"insurance": {
+					"insurance_type": "PT",
+					"insurance_name": "ACE INA Insurance"
+				}
+			},
+			{
+				"placing_id": 131,
+				"quotation_code": "QUO21043",
+				"type_cover": "GHS",
+				"insured_person": 906,
+				"start_periode": "2021-04-14",
+				"end_periode": "2022-04-13",
+				"policy_number": "T.B.A",
+				"brokerage_pct": "15.00",
+				"currency": "IDR",
+				"proposal": {
+					"file_upload": "ba772f989330ae63ac80ca56c76324d1.pdf"
+				},
+				"request": {
+					"request_code": "RQS210024",
+					"business_type": "RB",
+					"type_cover": "GHS",
+					"allocated_budget": "9000000000",
+					"pipeline": {
+						"pipeline_code": "PIP190193",
+						"company_type": "PT",
+						"company_name": "BANK MIZUHO INDONESIA"
+					}
+				},
+				"insurance": {
+					"insurance_type": "PT",
+					"insurance_name": "Avrist Assurance"
+				}
+			},
+			{
+				"placing_id": 129,
+				"quotation_code": "QUO21041",
+				"type_cover": "GHS",
+				"insured_person": 225,
+				"start_periode": "2021-04-01",
+				"end_periode": "2022-03-31",
+				"policy_number": "T.B.A",
+				"brokerage_pct": "12.50",
+				"currency": "IDR",
+				"proposal": {
+					"file_upload": "c816e5e7ebf886a42191e8bc509ae305.pdf"
+				},
+				"request": {
+					"request_code": "RQS210049",
+					"business_type": "RB",
+					"type_cover": "GHS",
+					"allocated_budget": "393610000",
+					"pipeline": {
+						"pipeline_code": "PIP190206",
+						"company_type": "PT",
+						"company_name": "MENARA THAMRIN"
+					}
+				},
+				"insurance": {
+					"insurance_type": "PT",
+					"insurance_name": "Asuransi AXA Indonesia"
+				}
+			},
+			{
+				"placing_id": 128,
+				"quotation_code": "QUO21039",
+				"type_cover": "GHS",
+				"insured_person": 14,
+				"start_periode": "2021-04-01",
+				"end_periode": "2022-03-31",
+				"policy_number": "T.B.A",
+				"brokerage_pct": "15.00",
+				"currency": "IDR",
+				"proposal": {
+					"file_upload": ""
+				},
+				"request": {
+					"request_code": "RQS210039",
+					"business_type": "INR",
+					"type_cover": "GHS",
+					"allocated_budget": "1000000",
+					"pipeline": {
+						"pipeline_code": "PIP190198",
+						"company_type": "PT",
+						"company_name": "NES GLOBAL TEKNIK"
+					}
+				},
+				"insurance": {
+					"insurance_type": "PT",
+					"insurance_name": "Asuransi AXA Indonesia"
+				}
+			},
+			{
+				"placing_id": 127,
+				"quotation_code": "QUO21038",
+				"type_cover": "GHS",
+				"insured_person": 157,
+				"start_periode": "2021-04-11",
+				"end_periode": "2022-04-10",
+				"policy_number": "T.B.A",
+				"brokerage_pct": "17.50",
+				"currency": "IDR",
+				"proposal": {
+					"file_upload": "5313140ea2f81da19a2c9f6ebdd40493.pdf"
+				},
+				"request": {
+					"request_code": "RQS210026",
+					"business_type": "RB",
+					"type_cover": "GHS",
+					"allocated_budget": "500000000",
+					"pipeline": {
+						"pipeline_code": "PIP190089",
+						"company_type": "PT",
+						"company_name": "SUPERIOR ENERGY SERVICES INDONESIA"
+					}
+				},
+				"insurance": {
+					"insurance_type": "PT",
+					"insurance_name": "Lippo General Insurance"
+				}
+			},
+			{
+				"placing_id": 126,
+				"quotation_code": "QUO21037",
+				"type_cover": "GPA",
+				"insured_person": 10,
+				"start_periode": "2021-03-26",
+				"end_periode": "2022-03-26",
+				"policy_number": "T.B.A",
+				"brokerage_pct": "25.00",
+				"currency": "IDR",
+				"proposal": {
+					"file_upload": "132074807d7f011573725bd2faca0b3d.pdf"
+				},
+				"request": {
+					"request_code": "RQS210020",
+					"business_type": "RB",
+					"type_cover": "GPA",
+					"allocated_budget": "2625000",
+					"pipeline": {
+						"pipeline_code": "PIP190207",
+						"company_type": "PT",
+						"company_name": "DEMO POWER INDONESIA"
+					}
+				},
+				"insurance": {
+					"insurance_type": "PT",
+					"insurance_name": "Asuransi Adira Dinamika, PT"
+				}
+			},
+			{
+				"placing_id": 125,
+				"quotation_code": "QUO21036",
+				"type_cover": "GTL",
+				"insured_person": 132,
+				"start_periode": "2021-02-19",
+				"end_periode": "2022-02-18",
+				"policy_number": "T.B.A",
+				"brokerage_pct": "22.00",
+				"currency": "IDR",
+				"proposal": {
+					"file_upload": "527a799bcc64e53cac1125fe9b8a35a9.pdf"
+				},
+				"request": {
+					"request_code": "RQS200223",
+					"business_type": "RB",
+					"type_cover": "GTL",
+					"allocated_budget": "71000000",
+					"pipeline": {
+						"pipeline_code": "PIP190113",
+						"company_type": "PT",
+						"company_name": "EAGLEBURGMANN INDONESIA"
+					}
+				},
+				"insurance": {
+					"insurance_type": "PT",
+					"insurance_name": "Great Eastern"
+				}
+			}
+		]
+	}
+}

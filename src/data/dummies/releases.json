@@ -1,0 +1,268 @@
+{
+	"success": true,
+	"data": {
+		"count": 138,
+		"rows": [
+			{
+				"proposal_id": 481,
+				"request_id": 506,
+				"file_upload": null,
+				"is_booking": "0",
+				"is_document": "0",
+				"is_screenshot": "0",
+				"is_send": "0",
+				"is_accept": "0",
+				"is_action": "N",
+				"closing_at": null,
+				"request": {
+					"request_code": "RQS210133",
+					"business_type": "RB",
+					"type_cover": "GHS",
+					"allocated_budget": "342145500",
+					"pipeline": {
+						"pipeline_code": "PIP190285",
+						"company_type": "PT",
+						"company_name": "CHARLIE SIERRA SIERRA INDONESIA"
+					},
+					"employee": {
+						"employee_name": "Randy Kusuma"
+					}
+				}
+			},
+			{
+				"proposal_id": 480,
+				"request_id": 503,
+				"file_upload": null,
+				"is_booking": "0",
+				"is_document": "0",
+				"is_screenshot": "0",
+				"is_send": "0",
+				"is_accept": "0",
+				"is_action": "N",
+				"closing_at": null,
+				"request": {
+					"request_code": "RQS210130",
+					"business_type": "GNB",
+					"type_cover": "GHS",
+					"allocated_budget": "0",
+					"pipeline": {
+						"pipeline_code": "PIP210042",
+						"company_type": "PT",
+						"company_name": "INFRACELL NUSATAMA"
+					},
+					"employee": {
+						"employee_name": "Randy Kusuma"
+					}
+				}
+			},
+			{
+				"proposal_id": 479,
+				"request_id": 505,
+				"file_upload": null,
+				"is_booking": "0",
+				"is_document": "0",
+				"is_screenshot": "0",
+				"is_send": "0",
+				"is_accept": "0",
+				"is_action": "N",
+				"closing_at": null,
+				"request": {
+					"request_code": "RQS210132",
+					"business_type": "GNB",
+					"type_cover": "GHS",
+					"allocated_budget": "200000000",
+					"pipeline": {
+						"pipeline_code": "PIP200041",
+						"company_type": "PT",
+						"company_name": "PREMIER QUALITAS INDONESIA"
+					},
+					"employee": {
+						"employee_name": "Andrew"
+					}
+				}
+			},
+			{
+				"proposal_id": 478,
+				"request_id": 500,
+				"file_upload": null,
+				"is_booking": "0",
+				"is_document": "0",
+				"is_screenshot": "0",
+				"is_send": "0",
+				"is_accept": "0",
+				"is_action": "N",
+				"closing_at": null,
+				"request": {
+					"request_code": "RQS210127",
+					"business_type": "RB",
+					"type_cover": "GHS",
+					"allocated_budget": "150299000",
+					"pipeline": {
+						"pipeline_code": "PIP190204",
+						"company_type": "PT",
+						"company_name": "KYODO YUSHI LUBRICANTS TP INDONESIA"
+					},
+					"employee": {
+						"employee_name": "Randy Kusuma"
+					}
+				}
+			},
+			{
+				"proposal_id": 477,
+				"request_id": 504,
+				"file_upload": null,
+				"is_booking": "0",
+				"is_document": "0",
+				"is_screenshot": "0",
+				"is_send": "0",
+				"is_accept": "0",
+				"is_action": "N",
+				"closing_at": null,
+				"request": {
+					"request_code": "RQS210131",
+					"business_type": "RB",
+					"type_cover": "GHS",
+					"allocated_budget": "151998000",
+					"pipeline": {
+						"pipeline_code": "PIP200008",
+						"company_type": "PT",
+						"company_name": "BHUMI VARTA"
+					},
+					"employee": {
+						"employee_name": "Randy Kusuma"
+					}
+				}
+			},
+			{
+				"proposal_id": 473,
+				"request_id": 496,
+				"file_upload": null,
+				"is_booking": "0",
+				"is_document": "0",
+				"is_screenshot": "0",
+				"is_send": "0",
+				"is_accept": "0",
+				"is_action": "N",
+				"closing_at": null,
+				"request": {
+					"request_code": "RQS210123",
+					"business_type": "INB",
+					"type_cover": "GTL",
+					"allocated_budget": "0",
+					"pipeline": {
+						"pipeline_code": "PIP190182",
+						"company_type": "PT",
+						"company_name": "LUGANO BUMI NUSANTARA"
+					},
+					"employee": {
+						"employee_name": "Andrew"
+					}
+				}
+			},
+			{
+				"proposal_id": 472,
+				"request_id": 495,
+				"file_upload": null,
+				"is_booking": "0",
+				"is_document": "0",
+				"is_screenshot": "0",
+				"is_send": "0",
+				"is_accept": "0",
+				"is_action": "N",
+				"closing_at": null,
+				"request": {
+					"request_code": "RQS210122",
+					"business_type": "GNB",
+					"type_cover": "GTL",
+					"allocated_budget": "0",
+					"pipeline": {
+						"pipeline_code": "PIP190183",
+						"company_type": "PT",
+						"company_name": "PELAYARAN SINAR SHIPPING INDONESIA"
+					},
+					"employee": {
+						"employee_name": "Andrew"
+					}
+				}
+			},
+			{
+				"proposal_id": 471,
+				"request_id": 494,
+				"file_upload": null,
+				"is_booking": "0",
+				"is_document": "0",
+				"is_screenshot": "0",
+				"is_send": "0",
+				"is_accept": "0",
+				"is_action": "N",
+				"closing_at": null,
+				"request": {
+					"request_code": "RQS210121",
+					"business_type": "GNB",
+					"type_cover": "GHS",
+					"allocated_budget": "0",
+					"pipeline": {
+						"pipeline_code": "PIP190182",
+						"company_type": "PT",
+						"company_name": "LUGANO BUMI NUSANTARA"
+					},
+					"employee": {
+						"employee_name": "Andrew"
+					}
+				}
+			},
+			{
+				"proposal_id": 470,
+				"request_id": 493,
+				"file_upload": null,
+				"is_booking": "0",
+				"is_document": "0",
+				"is_screenshot": "0",
+				"is_send": "0",
+				"is_accept": "0",
+				"is_action": "N",
+				"closing_at": null,
+				"request": {
+					"request_code": "RQS210120",
+					"business_type": "GNB",
+					"type_cover": "GHS",
+					"allocated_budget": "0",
+					"pipeline": {
+						"pipeline_code": "PIP190183",
+						"company_type": "PT",
+						"company_name": "PELAYARAN SINAR SHIPPING INDONESIA"
+					},
+					"employee": {
+						"employee_name": "Andrew"
+					}
+				}
+			},
+			{
+				"proposal_id": 469,
+				"request_id": 491,
+				"file_upload": null,
+				"is_booking": "0",
+				"is_document": "0",
+				"is_screenshot": "0",
+				"is_send": "0",
+				"is_accept": "0",
+				"is_action": "N",
+				"closing_at": null,
+				"request": {
+					"request_code": "RQS210118",
+					"business_type": "RB",
+					"type_cover": "GTL",
+					"allocated_budget": "182000000",
+					"pipeline": {
+						"pipeline_code": "PIP200037",
+						"company_type": "PT",
+						"company_name": "MONTDOR OIL TUNGKAL LTD"
+					},
+					"employee": {
+						"employee_name": "Andrew"
+					}
+				}
+			}
+		]
+	}
+}

@@ -1,0 +1,188 @@
+{
+	"success": true,
+	"data": {
+		"count": 209,
+		"rows": [
+			{
+				"request_id": 507,
+				"pipeline_id": 417,
+				"client_id": 0,
+				"employee_id": 10,
+				"request_code": "RQS210134",
+				"business_level": "MK",
+				"business_type": "GNB",
+				"type_cover": "GHS",
+				"allocated_budget": "800000000",
+				"is_send": "1",
+				"is_assign": "1",
+				"is_approve": "0",
+				"pipeline": {
+					"company_name": "MANGGALA GELORA PERKASA",
+					"pipeline_code": "PIP210043"
+				}
+			},
+			{
+				"request_id": 505,
+				"pipeline_id": 315,
+				"client_id": 0,
+				"employee_id": 6,
+				"request_code": "RQS210132",
+				"business_level": "MK",
+				"business_type": "GNB",
+				"type_cover": "GHS",
+				"allocated_budget": "200000000",
+				"is_send": "1",
+				"is_assign": "1",
+				"is_approve": "1",
+				"pipeline": {
+					"company_name": "PREMIER QUALITAS INDONESIA",
+					"pipeline_code": "PIP200041"
+				}
+			},
+			{
+				"request_id": 503,
+				"pipeline_id": 416,
+				"client_id": 0,
+				"employee_id": 10,
+				"request_code": "RQS210130",
+				"business_level": "MK",
+				"business_type": "GNB",
+				"type_cover": "GHS",
+				"allocated_budget": "0",
+				"is_send": "1",
+				"is_assign": "1",
+				"is_approve": "1",
+				"pipeline": {
+					"company_name": "INFRACELL NUSATAMA",
+					"pipeline_code": "PIP210042"
+				}
+			},
+			{
+				"request_id": 499,
+				"pipeline_id": 232,
+				"client_id": 1092,
+				"employee_id": 10,
+				"request_code": "RQS210126",
+				"business_level": "MK",
+				"business_type": "GNB",
+				"type_cover": "GHS",
+				"allocated_budget": "0",
+				"is_send": "1",
+				"is_assign": "1",
+				"is_approve": "1",
+				"pipeline": {
+					"company_name": "SANKYU INDONESIA INTERNATIONAL",
+					"pipeline_code": "PIP190247"
+				}
+			},
+			{
+				"request_id": 496,
+				"pipeline_id": 167,
+				"client_id": 1046,
+				"employee_id": 6,
+				"request_code": "RQS210123",
+				"business_level": "MK",
+				"business_type": "INB",
+				"type_cover": "GTL",
+				"allocated_budget": "0",
+				"is_send": "1",
+				"is_assign": "1",
+				"is_approve": "1",
+				"pipeline": {
+					"company_name": "LUGANO BUMI NUSANTARA",
+					"pipeline_code": "PIP190182"
+				}
+			},
+			{
+				"request_id": 495,
+				"pipeline_id": 168,
+				"client_id": 518,
+				"employee_id": 6,
+				"request_code": "RQS210122",
+				"business_level": "MK",
+				"business_type": "GNB",
+				"type_cover": "GTL",
+				"allocated_budget": "0",
+				"is_send": "1",
+				"is_assign": "1",
+				"is_approve": "1",
+				"pipeline": {
+					"company_name": "PELAYARAN SINAR SHIPPING INDONESIA",
+					"pipeline_code": "PIP190183"
+				}
+			},
+			{
+				"request_id": 494,
+				"pipeline_id": 167,
+				"client_id": 1046,
+				"employee_id": 6,
+				"request_code": "RQS210121",
+				"business_level": "MK",
+				"business_type": "GNB",
+				"type_cover": "GHS",
+				"allocated_budget": "0",
+				"is_send": "1",
+				"is_assign": "1",
+				"is_approve": "1",
+				"pipeline": {
+					"company_name": "LUGANO BUMI NUSANTARA",
+					"pipeline_code": "PIP190182"
+				}
+			},
+			{
+				"request_id": 493,
+				"pipeline_id": 168,
+				"client_id": 518,
+				"employee_id": 6,
+				"request_code": "RQS210120",
+				"business_level": "MK",
+				"business_type": "GNB",
+				"type_cover": "GHS",
+				"allocated_budget": "0",
+				"is_send": "1",
+				"is_assign": "1",
+				"is_approve": "1",
+				"pipeline": {
+					"company_name": "PELAYARAN SINAR SHIPPING INDONESIA",
+					"pipeline_code": "PIP190183"
+				}
+			},
+			{
+				"request_id": 490,
+				"pipeline_id": 415,
+				"client_id": 0,
+				"employee_id": 10,
+				"request_code": "RQS210117",
+				"business_level": "MK",
+				"business_type": "GNB",
+				"type_cover": "GHS",
+				"allocated_budget": "0",
+				"is_send": "1",
+				"is_assign": "1",
+				"is_approve": "1",
+				"pipeline": {
+					"company_name": "WORKDAY INDONESIA",
+					"pipeline_code": "PIP210041"
+				}
+			},
+			{
+				"request_id": 489,
+				"pipeline_id": 412,
+				"client_id": 1294,
+				"employee_id": 6,
+				"request_code": "RQS210116",
+				"business_level": "MK",
+				"business_type": "GNB",
+				"type_cover": "GHS",
+				"allocated_budget": "200000000",
+				"is_send": "1",
+				"is_assign": "1",
+				"is_approve": "1",
+				"pipeline": {
+					"company_name": "DAUN BIRU ENGINEERING",
+					"pipeline_code": "PIP210038"
+				}
+			}
+		]
+	}
+}

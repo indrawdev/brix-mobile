@@ -1,0 +1,137 @@
+{
+	"success": true,
+	"data": {
+		"count": 405,
+		"rows": [
+			{
+				"pipeline_id": 419,
+				"pipeline_code": "PIP210045",
+				"company_name": "XURYA DAYA INDONESIA",
+				"business_level": "MK",
+				"head_office_address": "Menara Mandiri 2 lantai 17. Jl.Jend. Sudirman no. 54-55. Jakarta Selatan 12190",
+				"contact_person": "CHIKA",
+				"phone_number": "02139506637",
+				"contact_email": "chika@xurya.com",
+				"group_id": 0,
+				"group": null
+			},
+			{
+				"pipeline_id": 418,
+				"pipeline_code": "PIP210044",
+				"company_name": "KARYAMAS ADI NUSANTARA",
+				"business_level": "MK",
+				"head_office_address": "Jl. Cikini Raya no 12 & 14 Menteng Jakarta Pusat",
+				"contact_person": "URBANUS NANGOY",
+				"phone_number": "02121390858",
+				"contact_email": "urbanus.nangoy@karyamas-group.com",
+				"group_id": 0,
+				"group": null
+			},
+			{
+				"pipeline_id": 417,
+				"pipeline_code": "PIP210043",
+				"company_name": "MANGGALA GELORA PERKASA",
+				"business_level": "MK",
+				"head_office_address": "Senayan City Management Lantai LG",
+				"contact_person": "SARI",
+				"phone_number": "7237979",
+				"contact_email": "sari@senayanvity.id",
+				"group_id": 1,
+				"group": {
+					"group_id": 1,
+					"group_name": "None"
+				}
+			},
+			{
+				"pipeline_id": 416,
+				"pipeline_code": "PIP210042",
+				"company_name": "INFRACELL NUSATAMA",
+				"business_level": "MK",
+				"head_office_address": "18F, Gandaria 8 Office Tower,\nJl. Sultan Iskandar Muda, Kebayoran Lama,\nJakarta 12240, Indonesia",
+				"contact_person": "ANASTASIA RENNY",
+				"phone_number": "082133555503",
+				"contact_email": "anastasia.renny@infracell.net",
+				"group_id": 0,
+				"group": null
+			},
+			{
+				"pipeline_id": 415,
+				"pipeline_code": "PIP210041",
+				"company_name": "WORKDAY INDONESIA",
+				"business_level": "MK",
+				"head_office_address": "Singapore Office",
+				"contact_person": "IRENE TEH",
+				"phone_number": "282133555503",
+				"contact_email": "rhena.supoyo@integra.co.id",
+				"group_id": 0,
+				"group": null
+			},
+			{
+				"pipeline_id": 414,
+				"pipeline_code": "PIP210040",
+				"company_name": "BANK SULUTGO",
+				"business_level": "MK",
+				"head_office_address": "jl.sam ratulangi no.9 manado sulawesi utara indonesia",
+				"contact_person": "SUSAN",
+				"phone_number": "0431859191",
+				"contact_email": "corsec@banksulutgo.co.id",
+				"group_id": 1,
+				"group": {
+					"group_id": 1,
+					"group_name": "None"
+				}
+			},
+			{
+				"pipeline_id": 413,
+				"pipeline_code": "PIP210039",
+				"company_name": "YAYASAN PUTERA SAMPOERNA",
+				"business_level": "MK",
+				"head_office_address": "Sampoerna Strategic Square\nJl Jend Sudirman Kav 45 Setiabudi\nJakart",
+				"contact_person": "JUSAK PRASETYO JULIANTO",
+				"phone_number": "628158969963",
+				"contact_email": "jusak.julianto@sampoernaschoolssystem.com",
+				"group_id": 0,
+				"group": null
+			},
+			{
+				"pipeline_id": 412,
+				"pipeline_code": "PIP210038",
+				"company_name": "DAUN BIRU ENGINEERING",
+				"business_level": "MK",
+				"head_office_address": "tapos depok - jawa barat",
+				"contact_person": "MUTHIA",
+				"phone_number": "87743615",
+				"contact_email": "muthia@daunbiru.com",
+				"group_id": 0,
+				"group": null
+			},
+			{
+				"pipeline_id": 411,
+				"pipeline_code": "PIP210037",
+				"company_name": "NEXACE INDONESIA",
+				"business_level": "MK",
+				"head_office_address": "Jakarta",
+				"contact_person": "INDRA",
+				"phone_number": "081319260579",
+				"contact_email": "indra.bayu@photobookworldwide.com",
+				"group_id": 1,
+				"group": {
+					"group_id": 1,
+					"group_name": "None"
+				}
+			},
+			{
+				"pipeline_id": 410,
+				"pipeline_code": "PIP210036",
+				"company_name": "TURNITIN",
+				"business_level": "MK",
+				"head_office_address": "Sampoerna Strategic Square.\nSouth Gate, 25th Fl",
+				"contact_person": "GRACE WEI",
+				"phone_number": "447918953446",
+				"contact_email": "grace.wei@lockton.uk",
+				"group_id": 0,
+				"group": null
+			}
+		]
+	}
+}

@@ -1,0 +1,47 @@
+{
+	"success": true,
+	"data": {
+		"count": 3,
+		"rows": [
+			{
+				"pipeline_id": 403,
+				"pipeline_code": "PIP210029",
+				"company_name": "SUPERMAMA KARYA INDONESIA",
+				"business_level": "CR",
+				"head_office_address": "Jalan Raya Pos Pengumben No.34 E-F, RT.1/RW.5, Klp. Dua, Kec. Kb. Jeruk, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11550",
+				"contact_person": "RASYA",
+				"phone_number": "088210612547",
+				"contact_email": "rasya@supermama.id",
+				"group_id": 0,
+				"group": null
+			},
+			{
+				"pipeline_id": 398,
+				"pipeline_code": "PIP210024",
+				"company_name": "BRIXUAT6",
+				"business_level": "CR",
+				"head_office_address": "JL SUOIRMAN KAV 54",
+				"contact_person": "HEPY",
+				"phone_number": "08161980815",
+				"contact_email": "hepy.saraswulan@gmail.com",
+				"group_id": 6,
+				"group": {
+					"group_id": 6,
+					"group_name": "SGS Group"
+				}
+			},
+			{
+				"pipeline_id": 387,
+				"pipeline_code": "PIP210013",
+				"company_name": "SGMW SALES INDONESIA",
+				"business_level": "CR",
+				"head_office_address": "Greenland International Industrial Center (GIIC) Blok BA No. 1 Deltamas, Sukamahi, Kec. Cikarang Pusat, Bekasi, Jawa Barat 17530",
+				"contact_person": "IVAN",
+				"phone_number": "0818655566",
+				"contact_email": "ivan.nuramdhani@sgmw.co.id",
+				"group_id": 0,
+				"group": null
+			}
+		]
+	}
+}
