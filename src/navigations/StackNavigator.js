@@ -24,9 +24,9 @@ import PlacingDetail from '../screens/PlacingDetail';
 import Quotation from '../screens/Quotation';
 import QuotationDetail from '../screens/QuotationDetail';
 
-import Setting from '../screens/settings/Setting';
-import Profile from '../screens/settings/Profile';
-import ChangePass from '../screens/settings/ChangePass';
+import Setting from '../screens/Setting';
+import Profile from '../screens/Profile';
+import ChangePass from '../screens/ChangePass';
 
 import { COLORS } from '../constants/theme';
 

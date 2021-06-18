@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import {
 	SafeAreaView,
 	StyleSheet,
@@ -6,13 +6,22 @@ import {
 	View,
 	TouchableOpacity,
 	ActivityIndicator,
-	FlatList,
-	Alert
+	Alert,
+	Animated,
+	Image
 } from 'react-native';
-import { ListItem, Avatar } from 'react-native-elements'
 
+const BG_IMG = 'https://oswallpapers.com/wp-content/uploads/2020/06/2.jpg';
+const ITEM_MARGIN_BOTTOM = 20;
+const ITEM_PADDING = 10;
+const HEIGHT_IMG = 100;
+
+const ITEM_SIZE = HEIGHT_IMG + ITEM_PADDING * 2 + ITEM_MARGIN_BOTTOM;
 
 const Pipeline = () => {
+
+	const scrollY = useRef(new Animated.Value(0)).current;
+
 	const [loading, setLoading] = useState(true);
 	const [dataSource, setDataSource] = useState([]);
 
@@ -20,7 +29,7 @@ const Pipeline = () => {
 
 	const getData = () => {
 		setLoading(true);
-		
+
 		fetch('https://portal.integra.co.id/dummies/pipelines.json', {
 			method: 'GET',
 			headers: {
@@ -56,26 +65,33 @@ const Pipeline = () => {
 		)
 	}
 
-	const ItemView = ({ item }) => {
+	const renderItem = ({ item, index }) => {
+		const scale = scrollY.interpolate({
+			inputRange: [
+				-1, 0,
+				ITEM_SIZE * index,
+				ITEM_SIZE * (index + 2)
+			],
+			outputRange: [1, 1, 1, 0]
+		})
 		return (
-			<ListItem bottomDivider>
-				<Avatar
-					size="small"
-					rounded
-					title={item.pipeline_code}
-					onPress={() => { }}
-					activeOpacity={0.7}
-					source={{
-						uri: 'https://randomuser.me/api/portraits/men/41.jpg',
-					}}
+			<Animated.View style={[
+				styles.item,
+				{
+					transform: [{ scale }]
+				}
+			]}>
+				<Image
+					style={styles.image}
+					source={{ uri: '' }}
+					resizeMode='contain'
 				/>
-				<ListItem.Content>
-					<ListItem.Title style={styles.itemTitleText}>{item.company_name}</ListItem.Title>
-					<ListItem.Subtitle style={styles.itemSubTitleText}>{item.head_office_address}</ListItem.Subtitle>
-				</ListItem.Content>
-				<ListItem.Chevron />
-			</ListItem>
-
+				<View style={styles.wrapText}>
+					<Text style={styles.fontSize}>
+						{item.company_name}
+					</Text>
+				</View>
+			</Animated.View>
 		)
 	}
 
@@ -86,33 +102,59 @@ const Pipeline = () => {
 		)
 	}
 
+	const handleLoadMore = () => {
+
+	}
+
 	const getItem = (item) => {
 		Alert.alert(
-      item.company_name,
-      item.pipeline_code,
-      [
-        {
-          text: "Cancel",
-          onPress: () => console.log("Cancel Pressed"),
-          style: "cancel"
-        },
-        { text: "OK", onPress: () => console.log("OK Pressed") }
-      ]
-    );
+			item.company_name,
+			item.pipeline_code,
+			[
+				{
+					text: "Cancel",
+					onPress: () => console.log("Cancel Pressed"),
+					style: "cancel"
+				},
+				{ text: "OK", onPress: () => console.log("OK Pressed") }
+			]
+		);
 	}
 
 	return (
 		<SafeAreaView style={{ flex: 1 }}>
-			<View style={styles.container}>
-				<FlatList
-					data={dataSource}
-					keyExtractor={(item, index) => index.toString()}
-					ItemSeparatorComponent={ItemSeparatorView}
-					enableEmptySections={true}
-					renderItem={ItemView}
-					ListFooterComponent={renderFooter}
-				/>
-			</View>
+			<Image
+				source={{ uri: BG_IMG }}
+				style={StyleSheet.absoluteFillObject}
+				blurRadius={70}
+			/>
+			{loading ? <ActivityIndicator /> : (
+				<Animated.View style={styles.container}>
+					<Animated.FlatList
+						data={dataSource}
+						keyExtractor={item => item.pipeline_id}
+						ItemSeparatorComponent={ItemSeparatorView}
+						enableEmptySections={true}
+						renderItem={renderItem}
+						ListFooterComponent={renderFooter}
+						refreshing={loading}
+						onRefresh={getData}
+						contentContainerStyle={{
+							padding: 20
+						}}
+						onScroll={Animated.event(
+							[{
+								naviteEvent: {
+									contentOffset: {
+										y: scrollY
+									}
+								}
+							}],
+							{ useNativeDriver: false }
+						)}
+					/>
+				</Animated.View>
+			)}
 		</SafeAreaView>
 	);
 };
@@ -154,6 +196,36 @@ const styles = StyleSheet.create({
 		height: 0.5,
 		width: '100%',
 		backgroundColor: '#C8C8C8',
+	},
+	loader: {
+		marginTop: 10,
+		alignItems: 'center'
+	},
+	fontSize: {
+		fontSize: 18
+	},
+	image: {
+		width: 100,
+		height: 100
+	},
+	wrapText: {
+		flex: 1,
+		marginLeft: 10,
+		justifyContent: 'center'
+	},
+	item: {
+		flexDirection: 'row',
+		marginBottom: 20,
+		borderRadius: 10,
+		backgroundColor: '#fff',
+		shadowColor: '#000',
+		shadowOffset: {
+			width: 0,
+			height: 10
+		},
+		shadowOpacity: .3,
+		shadowRadius: 20,
+		padding: 10
 	}
 });
 
