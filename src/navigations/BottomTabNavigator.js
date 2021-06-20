@@ -12,13 +12,24 @@ import {
 	PlacementTopTab
 } from './TopTabNavigator'
 
-import { COLORS } from '../constants/theme';
+import { COLORS } from '../constants';
 
 const Tab = createBottomTabNavigator()
 
 const BottomTabNavigator = () => {
 	return (
 		<Tab.Navigator
+			tabBarOptions={{
+				showLabel: false,
+				style: {
+					position: 'absolute',
+					bottom: 0,
+					left: 0,
+					right: 0,
+					backgroundColor: "transparent",
+					elevation: 0
+				}
+			}}
 			screenOptions={({ route }) => ({
 				
 				tabBarIcon: ({ focused, color, size }) => {
@@ -53,5 +64,19 @@ const BottomTabNavigator = () => {
 		</Tab.Navigator>
 	)
 }
+
+const styles = StyleSheet.create({
+	shadow: {
+		shadowColor: COLORS.primary,
+		shadowOffset: {
+			width: 0,
+			height: 10,
+		},
+		shadowOpacity: 0.25,
+		shadowRadius: 3.84,
+
+		elevation: 5
+	}
+});
 
 export default BottomTabNavigator;
