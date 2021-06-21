@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { Text, View, TouchableOpacity } from 'react-native';
 
 const ReleaseDetail = () => {
 	const [loading, setLoading] = useState(true);
@@ -8,14 +8,11 @@ const ReleaseDetail = () => {
 	return (
 		<TouchableOpacity>
 			<View>
-				<Text>ReleaseDetail</Text>
+				<Text>Release Detail</Text>
 			</View>
 		</TouchableOpacity>
 	);
 };
 
-const styles = StyleSheet.create({
-
-});
 
 export default ReleaseDetail;

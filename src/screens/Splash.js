@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {Text, View, TouchableOpacity } from 'react-native';
 
 const Splash = () => {
 	const [loading, setLoading] = useState(true);
@@ -10,9 +10,5 @@ const Splash = () => {
 		</View>
 	);
 };
-
-const styles = StyleSheet.create({
-
-});
 
 export default Splash;

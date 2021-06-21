@@ -9,7 +9,8 @@ import {
 import {
 	ProspectTopTab,
 	MaintenanceTopTab,
-	PlacementTopTab
+	PlacementTopTab,
+	ClaimTopTab
 } from './TopTabNavigator'
 
 import { COLORS } from '../constants';
@@ -43,6 +44,8 @@ const BottomTabNavigator = () => {
 						iconName = focused ? 'file-archive' : 'file-archive';
 					} else if (route.name === 'Placement') {
 						iconName = focused ? 'file-pdf' : 'file-pdf';
+					} else if (route.name === 'Claim') {
+						iconName = focused ? 'bars' : 'bars';
 					} else if (route.name === 'Setting') {
 						iconName = focused ? 'bars' : 'bars';
 					}
@@ -60,6 +63,7 @@ const BottomTabNavigator = () => {
 			<Tab.Screen name="Prospect" component={ProspectTopTab} />
 			<Tab.Screen name="Maintenance" component={MaintenanceTopTab} />
 			<Tab.Screen name="Placement" component={PlacementTopTab} />
+			<Tab.Screen name="Claim" component={ClaimTopTab} />
 			<Tab.Screen name="Setting" component={SettingStackNavigator} />
 		</Tab.Navigator>
 	)

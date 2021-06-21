@@ -5,25 +5,48 @@ const { width, height } = Dimensions.get('window');
 export const COLORS = {
 	primary: "#6200EE",
 	secondary: "#FF6F00",
-	black: "#000000",
+
+	green: "#66D59A",
+	lightGreen: "#E6FEF0",
+
+	lime: "#00BA63",
+	emerald: "#2BC978",
+
+	red: "#FF4134",
+	lightRed: "#FFF1F0",
+
+	purple: "#6B3CE9",
+	lightpurple: "#F3EFFF",
+
+	yellow: "#FFC664",
+	lightyellow: "#FFF9EC",
+
+	black: "#1E1F20",
 	white: "#FFFFFF",
-	gray: "#E0E0E0"
+
+	lightGray: "#FCFBFC",
+	gray: "#C1C3C5",
+	darkgray: "#C3C6C7",
+
+	transparent: "transparent",
+
 }
 
 export const SIZES = {
-	// globals
+
+	// global sizes
 	base: 8,
 	font: 14,
-	radius: 12,
-	padding: 24,
+	radius: 30,
+	padding: 10,
+	padding2: 12,
 
-	// fontSizes
-	navTitle: 25,
+	// font sizes
+	largeTitle: 50,
 	h1: 30,
 	h2: 22,
-	h3: 16,
-	h4: 14,
-	h5: 12,
+	h3: 20,
+	h4: 18,
 	body1: 30,
 	body2: 20,
 	body3: 16,
@@ -32,7 +55,7 @@ export const SIZES = {
 
 	// dimension
 	width,
-	height
+	height,
 }
 
 export const FONTS = {
@@ -49,4 +72,6 @@ export const FONTS = {
 	body5: { fontFamily: "Roboto-Regular", fontSize: SIZES.body5, lineHeight: 22 },
 };
 
-export default { COLORS, SIZES, FONTS }
+const appTheme = { COLORS, SIZES, FONTS };
+
+export default appTheme;

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import {  Text, View, TouchableOpacity } from 'react-native';
 
 const ProposalDetail = () => {
 	const [loading, setLoading] = useState(true);
@@ -13,9 +13,5 @@ const ProposalDetail = () => {
 		</TouchableOpacity>
 	);
 };
-
-const styles = StyleSheet.create({
-
-});
 
 export default ProposalDetail;

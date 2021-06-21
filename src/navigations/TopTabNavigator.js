@@ -8,9 +8,11 @@ import {
 	ReleaseStackNavigator,
 	PlacingStackNavigator,
 	QuotationStackNavigator,
+	ReimbursementStackNavigator,
+	CashlessStackNavigator
 } from './StackNavigator'
 
-import { COLORS } from '../constants/theme';
+import { COLORS } from '../constants';
 
 const Tab = createMaterialTopTabNavigator()
 
@@ -22,7 +24,7 @@ const tabBarOptionsStyle = {
 		fontFamily: 'Roboto-Bold'
 	},
 	activeTintColor: COLORS.white,
-	style: { backgroundColor: COLORS.purple },
+	style: { backgroundColor: COLORS.primary },
 }
 
 const ProspectTopTab = () => {
@@ -61,4 +63,20 @@ const PlacementTopTab = () => {
 	)
 }
 
-export { ProspectTopTab, MaintenanceTopTab, PlacementTopTab }
+const ClaimTopTab = () => {
+	return (
+		<Tab.Navigator
+			tabBarOptions={tabBarOptionsStyle}
+			initialRouteName="Reimbursement">
+			<Tab.Screen name="Reimbursement" component={ReimbursementStackNavigator} />
+			<Tab.Screen name="Cashless" component={CashlessStackNavigator} />
+		</Tab.Navigator>
+	)
+}
+
+export {
+	ProspectTopTab,
+	MaintenanceTopTab,
+	PlacementTopTab,
+	ClaimTopTab
+}

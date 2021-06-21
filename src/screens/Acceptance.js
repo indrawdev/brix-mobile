@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { Text, View, TouchableOpacity } from 'react-native';
 
 const Acceptance = () => {
 	const [isLoading, setLoading] = useState(true);
@@ -13,9 +13,5 @@ const Acceptance = () => {
 		</TouchableOpacity>
 	);
 };
-
-const styles = StyleSheet.create({
-
-});
 
 export default Acceptance;

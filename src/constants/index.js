@@ -1,7 +1,8 @@
-import theme, { COLORS, SIZES, FONTS }  from "./themes";
+import icons from "./icons";
+import { COLORS, SIZES, FONTS } from "./theme";
 
 export {
-	theme,
+	icons,
 	COLORS,
 	SIZES,
 	FONTS

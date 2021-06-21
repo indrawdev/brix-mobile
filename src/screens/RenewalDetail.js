@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { Text, View, TouchableOpacity } from 'react-native';
 
 const RenewalDetail = () => {
 	const [loading, setLoading] = useState(true);
@@ -15,7 +15,10 @@ const RenewalDetail = () => {
 };
 
 const styles = StyleSheet.create({
-
+	container: {
+		justifyContent: 'center',
+		flex: 1,
+	}
 });
 
 export default RenewalDetail;

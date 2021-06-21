@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {
 	SafeAreaView,
-	StyleSheet,
 	View,
 	Text,
 	Image,
@@ -28,18 +27,12 @@ const Dashboard = () => {
 
 	return (
 		<TouchableOpacity>
-			<View style={styles.container}>
+			<View>
 
 			</View>
 		</TouchableOpacity>
 	);
 };
 
-const styles = StyleSheet.create({
-	container: {
-		justifyContent: 'center',
-		flex: 1,
-	}
-});
 
 export default Dashboard;

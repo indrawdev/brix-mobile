@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { Text, View, TouchableOpacity } from 'react-native';
 
 const ChangePass = () => {
 	const [loading, setLoading] = useState(true);
@@ -7,19 +7,11 @@ const ChangePass = () => {
 
 	return (
 		<TouchableOpacity>
-			<View style={ styles.container}>
+			<View>
 				<Text>ChangePass</Text>
 			</View>
 		</TouchableOpacity>
 	);
 };
-
-const styles = StyleSheet.create({
-	container: {
-		justifyContent: 'center',
-		flex: 1,
-		alignItems: 'center',
-	},
-});
 
 export default ChangePass;

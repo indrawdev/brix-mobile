@@ -1,34 +1,38 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import Dashboard from '../screens/Dashboard';
+import {
+	Acceptance,
+	Cashless,
+	CashlessDetail,
+	ChangePass,
+	Dashboard,
+	Issue,
+	Login,
+	Pipeline,
+	PipelineDetail,
+	Placing,
+	PlacingDetail,
+	Profile,
+	Proposal,
+	ProposalDetail,
+	Prospect,
+	ProspectDetail,
+	Quotation,
+	QuotationDetail,
+	Reimbursement,
+	ReimbursementDetail,
+	Release,
+	ReleaseDetail,
+	Renewal,
+	RenewalDetail,
+	Request,
+	RequestDetail,
+	Setting,
+	Timesheet
+} from '../screens';
 
-import Pipeline from '../screens/Pipeline';
-import PipelineDetail from '../screens/PipelineDetail';
-
-import Request from '../screens/Request';
-import RequestDetail from '../screens/RequestDetail';
-
-import Prospect from '../screens/Prospect';
-import ProspectDetail from '../screens/ProspectDetail';
-
-import Renewal from '../screens/Renewal';
-import RenewalDetail from '../screens/RenewalDetail';
-
-import Release from '../screens/Release';
-import ReleaseDetail from '../screens/ReleaseDetail';
-
-import Placing from '../screens/Placing';
-import PlacingDetail from '../screens/PlacingDetail';
-
-import Quotation from '../screens/Quotation';
-import QuotationDetail from '../screens/QuotationDetail';
-
-import Setting from '../screens/Setting';
-import Profile from '../screens/Profile';
-import ChangePass from '../screens/ChangePass';
-
-import { COLORS } from '../constants/theme';
+import { COLORS } from '../constants';
 
 
 const Stack = createStackNavigator()
@@ -89,6 +93,23 @@ const RenewalStackNavigator = () => {
 	)
 }
 
+const AcceptanceStackNavigator = () => {
+	return (
+		<Stack.Navigator screenOptions={{headerShown: false}}>
+			<Stack.Screen name="Acceptance" component={Acceptance} />
+		</Stack.Navigator>
+	)
+}
+
+const ProposalStackNavigator = () => {
+	return (
+		<Stack.Navigator screenOptions={{headerShown: false}}>
+			<Stack.Screen name="Proposal" component={Proposal} />
+			<Stack.Screen name="Detail Proposal" component={ProposalDetail} />
+		</Stack.Navigator>
+	)
+}
+
 const ReleaseStackNavigator = () => {
 	return (
 		<Stack.Navigator screenOptions={{headerShown: false}}>
@@ -116,6 +137,20 @@ const QuotationStackNavigator = () => {
 	)
 }
 
+const ReimbursementStackNavigator = () => {
+	<Stack.Navigator screenOptions={{headerShown: false}}>
+		<Stack.Screen name="Reimbursement" component={Reimbursement} />
+		<Stack.Screen name="Reimbursement Detail" component={ReimbursementDetail} />
+	</Stack.Navigator>
+}
+
+const CashlessStackNavigator = () => {
+	<Stack.Navigator screenOptions={{headerShown: false}}>
+		<Stack.Screen name="Cashless" component={Cashless} />
+		<Stack.Screen name="Cashless Detail" component={CashlessDetail} />
+	</Stack.Navigator>
+}
+
 const SettingStackNavigator = () => {
 	return (
 		<Stack.Navigator screenOptions={screenOptionStyle}>
@@ -132,8 +167,12 @@ export {
 	RequestStackNavigator,
 	ProspectStackNavigator,
 	RenewalStackNavigator,
+	AcceptanceStackNavigator,
+	ProposalStackNavigator,
 	ReleaseStackNavigator,
 	PlacingStackNavigator,
 	QuotationStackNavigator,
-	SettingStackNavigator
+	ReimbursementStackNavigator,
+	CashlessStackNavigator,
+	SettingStackNavigator,
 }

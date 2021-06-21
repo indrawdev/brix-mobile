@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { Text, View, TouchableOpacity } from 'react-native';
 
 const Proposal = () => {
 	const [loading, setLoading] = useState(true);
@@ -14,8 +14,5 @@ const Proposal = () => {
 	);
 };
 
-const styles = StyleSheet.create({
-
-});
 
 export default Proposal;
