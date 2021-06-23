@@ -9,6 +9,7 @@ const PipelineDetail = () => {
 	return (
 		<SafeAreaView style={{ flex: 1 }}>
 			<View>
+				<Text>Pipeline Detail</Text>
 			</View>
 		</SafeAreaView>
 	)

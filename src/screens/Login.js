@@ -8,7 +8,7 @@ import { COLORS, SIZES, FONTS  } from "../constants"
 const Login = ({ navigation }) => {
 	return (
 		<View>
-
+			<Text>Login</Text>
 		</View>
 	);
 };

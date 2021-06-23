@@ -14,11 +14,4 @@ const Renewal = () => {
 	);
 };
 
-const styles = StyleSheet.create({
-	container: {
-		justifyContent: 'center',
-		flex: 1,
-	}
-});
-
 export default Renewal;

@@ -20,7 +20,7 @@ const Dashboard = () => {
 	function renderHeader() {
 		return (
 			<View style={{ flexDirection: 'row', marginVertical: SIZES.padding * 2 }}>
-				
+				<Text></Text>
 			</View>
 		)
 	}
@@ -28,7 +28,7 @@ const Dashboard = () => {
 	return (
 		<TouchableOpacity>
 			<View>
-
+				<Text>Dashboard</Text>
 			</View>
 		</TouchableOpacity>
 	);
