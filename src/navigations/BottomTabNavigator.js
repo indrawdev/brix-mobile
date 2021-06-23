@@ -1,6 +1,7 @@
-import React from 'react'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import Icon from 'react-native-vector-icons/FontAwesome5'
+import React from 'react';
+import { StyleSheet } from 'react-native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 import {
 	DashboardStackNavigator,
 	SettingStackNavigator
@@ -44,10 +45,6 @@ const BottomTabNavigator = () => {
 						iconName = focused ? 'file-archive' : 'file-archive';
 					} else if (route.name === 'Placement') {
 						iconName = focused ? 'file-pdf' : 'file-pdf';
-					} else if (route.name === 'Claim') {
-						iconName = focused ? 'bars' : 'bars';
-					} else if (route.name === 'Setting') {
-						iconName = focused ? 'bars' : 'bars';
 					}
 
 					return <Icon name={iconName} size={size} color={color} />
@@ -63,8 +60,7 @@ const BottomTabNavigator = () => {
 			<Tab.Screen name="Prospect" component={ProspectTopTab} />
 			<Tab.Screen name="Maintenance" component={MaintenanceTopTab} />
 			<Tab.Screen name="Placement" component={PlacementTopTab} />
-			<Tab.Screen name="Claim" component={ClaimTopTab} />
-			<Tab.Screen name="Setting" component={SettingStackNavigator} />
+			
 		</Tab.Navigator>
 	)
 }
@@ -78,7 +74,6 @@ const styles = StyleSheet.create({
 		},
 		shadowOpacity: 0.25,
 		shadowRadius: 3.84,
-
 		elevation: 5
 	}
 });

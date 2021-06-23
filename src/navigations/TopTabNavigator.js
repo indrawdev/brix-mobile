@@ -1,5 +1,5 @@
-import React from 'react'
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
+import React from 'react';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import {
 	PipelineStackNavigator,
 	RequestStackNavigator,
@@ -10,7 +10,7 @@ import {
 	QuotationStackNavigator,
 	ReimbursementStackNavigator,
 	CashlessStackNavigator
-} from './StackNavigator'
+} from './StackNavigator';
 
 import { COLORS } from '../constants';
 
@@ -18,13 +18,10 @@ const Tab = createMaterialTopTabNavigator()
 
 const tabBarOptionsStyle = {
 	labelStyle: {
-		fontSize: 12,
 		alignSelf: 'center',
-		fontWeight: 'normal',
-		fontFamily: 'Roboto-Bold'
 	},
 	activeTintColor: COLORS.white,
-	style: { backgroundColor: COLORS.primary },
+	style: { backgroundColor: COLORS.purple },
 }
 
 const ProspectTopTab = () => {

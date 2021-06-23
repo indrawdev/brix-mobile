@@ -32,7 +32,7 @@ import {
 	Timesheet
 } from '../screens';
 
-import { COLORS } from '../constants';
+import { COLORS, FONTS } from '../constants';
 
 
 const Stack = createStackNavigator()

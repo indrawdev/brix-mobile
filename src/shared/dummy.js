@@ -1,4 +1,8 @@
-const featuresData = [
+import icons from '../constants/icons';
+import images from '../constants/images';
+import { COLORS } from '../constants';
+
+export const featuresData = [
 	{
 		id: 1,
 		icon: icons.reload,
@@ -57,7 +61,7 @@ const featuresData = [
 	},
 ]
 
-const specialPromoData = [
+export const specialPromoData = [
 	{
 		id: 1,
 		img: images.promoBanner,
@@ -83,5 +87,3 @@ const specialPromoData = [
 		description: "Don't miss it. Grab it now!"
 	},
 ]
-
-export { featuresData, specialPromoData }
