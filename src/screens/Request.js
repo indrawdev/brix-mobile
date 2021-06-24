@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {
 	SafeAreaView,
 	View,
+	Text
 } from 'react-native';
 
 const Request = () => {

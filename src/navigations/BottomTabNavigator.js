@@ -1,10 +1,15 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, TouchableOpacity, View, Image, Text } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import Svg, {
+	Path
+} from 'react-native-svg';
+
 import {
 	DashboardStackNavigator,
-	SettingStackNavigator
+	SettingStackNavigator,
+	CryptoStackNavigator
 } from './StackNavigator'
 
 import {
@@ -14,7 +19,8 @@ import {
 	ClaimTopTab
 } from './TopTabNavigator'
 
-import { COLORS } from '../constants';
+import icons from '../constants/icons';
+import { COLORS, FONTS } from '../constants';
 
 const Tab = createBottomTabNavigator()
 
@@ -28,39 +34,164 @@ const BottomTabNavigator = () => {
 					bottom: 0,
 					left: 0,
 					right: 0,
-					backgroundColor: "transparent",
-					elevation: 0
+					elevation: 0,
+					backgroundColor: COLORS.white,
+					borderTopColor: 'transparent',
+					height: 100
 				}
 			}}
-			screenOptions={({ route }) => ({
-				
-				tabBarIcon: ({ focused, color, size }) => {
-					let iconName
-
-					if (route.name === 'Dashboard') {
-						iconName = focused ? 'chart-line' : 'chart-line';
-					} else if (route.name === 'Prospect') {
-						iconName = focused ? 'file-alt' : 'file-alt';
-					} else if (route.name === 'Maintenance') {
-						iconName = focused ? 'file-archive' : 'file-archive';
-					} else if (route.name === 'Placement') {
-						iconName = focused ? 'file-pdf' : 'file-pdf';
-					}
-
-					return <Icon name={iconName} size={size} color={color} />
-				},
-			})}
-			tabBarOptions={{
-				activeTintColor: COLORS.gold,
-				inactiveTintColor: COLORS.black,
-				fontFamily: 'Roboto-Regular'
-			}}
 		>
-			<Tab.Screen name="Dashboard" component={DashboardStackNavigator} />
-			<Tab.Screen name="Prospect" component={ProspectTopTab} />
-			<Tab.Screen name="Maintenance" component={MaintenanceTopTab} />
-			<Tab.Screen name="Placement" component={PlacementTopTab} />
-			
+			<Tab.Screen
+				name="Dashboard"
+				component={DashboardStackNavigator}
+				options={{
+					tabBarIcon: ({ focused }) => (
+						<View
+							style={{
+								alignItems: 'center',
+								justifyContent: 'center'
+							}}
+						>
+							<Image
+								source={icons.home}
+								resizeMode="contain"
+								style={{
+									width: 25,
+									height: 25,
+									tintColor: focused ? COLORS.primary : COLORS.black
+								}}
+							/>
+							<Text
+								style={{
+									color: focused ? COLORS.primary : COLORS.black,
+									...FONTS.body5
+								}}
+							>Home</Text>
+						</View>
+					)
+				}}
+			/>
+			<Tab.Screen
+				name="Prospect"
+				component={ProspectTopTab}
+				options={{
+					tabBarIcon: ({ focused }) => (
+						<View
+							style={{
+								alignItems: 'center',
+								justifyContent: 'center'
+							}}
+						>
+							<Image
+								source={icons.line_graph}
+								resizeMode="contain"
+								style={{
+									width: 25,
+									height: 25,
+									tintColor: focused ? COLORS.primary : COLORS.black
+								}}
+							/>
+							<Text
+								style={{
+									color: focused ? COLORS.primary : COLORS.black,
+									...FONTS.body5
+								}}
+							>Prospect</Text>
+						</View>
+
+					)
+				}}
+			/>
+			<Tab.Screen
+				name="Maintenance"
+				component={MaintenanceTopTab}
+				options={{
+					tabBarIcon: ({ focused }) => (
+						<View
+							style={{
+								alignItems: 'center',
+								justifyContent: 'center'
+							}}
+						>
+							<Image
+								source={icons.pie_chart}
+								resizeMode="contain"
+								style={{
+									width: 25,
+									height: 25,
+									tintColor: focused ? COLORS.primary : COLORS.black
+								}}
+							/>
+							<Text
+								style={{
+									color: focused ? COLORS.primary : COLORS.black,
+									...FONTS.body5
+								}}
+							>Maintenance</Text>
+						</View>
+					)
+				}}
+			/>
+			<Tab.Screen
+				name="Placement"
+				component={PlacementTopTab}
+				options={{
+					tabBarIcon: ({ focused }) => (
+						<View
+							style={{
+								alignItems: 'center',
+								justifyContent: 'center'
+							}}
+						>
+							<Image
+								source={icons.settings}
+								resizeMode="contain"
+								style={{
+									width: 25,
+									height: 25,
+									tintColor: focused ? COLORS.primary : COLORS.black
+								}}
+							/>
+							<Text
+								style={{
+									color: focused ? COLORS.primary : COLORS.black,
+									...FONTS.body5
+								}}
+							>Setting</Text>
+						</View>
+					)
+				}}
+			/>
+			<Tab.Screen
+				name="Crypto"
+				component={CryptoStackNavigator}
+				options={{
+					tabBarIcon: ({ focused }) => (
+						<View
+							style={{
+								alignItems: 'center',
+								justifyContent: 'center'
+							}}
+						>
+							<Image
+								source={icons.transaction}
+								resizeMode="contain"
+								style={{
+									width: 25,
+									height: 25,
+									tintColor: focused ? COLORS.primary : COLORS.black
+								}}
+							/>
+							<Text
+								style={{
+									color: focused ? COLORS.primary : COLORS.black,
+									...FONTS.body5
+								}}
+							>Crypto</Text>
+						</View>
+					)
+				}}
+			/>
 		</Tab.Navigator>
 	)
 }
@@ -76,6 +207,6 @@ const styles = StyleSheet.create({
 		shadowRadius: 3.84,
 		elevation: 5
 	}
-});
+})
 
 export default BottomTabNavigator;

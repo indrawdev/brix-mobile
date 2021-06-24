@@ -6,7 +6,9 @@ import {
 	Cashless,
 	CashlessDetail,
 	ChangePass,
+	CryptoDetail,
 	Dashboard,
+	Home,
 	Issue,
 	Login,
 	Pipeline,
@@ -29,7 +31,8 @@ import {
 	Request,
 	RequestDetail,
 	Setting,
-	Timesheet
+	Timesheet,
+	Transaction
 } from '../screens';
 
 import { COLORS, FONTS } from '../constants';
@@ -59,7 +62,7 @@ const DashboardStackNavigator = () => {
 
 const PipelineStackNavigator = () => {
 	return (
-		<Stack.Navigator screenOptions={{headerShown: false}}>
+		<Stack.Navigator screenOptions={{ headerShown: false }}>
 			<Stack.Screen name="Pipeline" component={Pipeline} />
 			<Stack.Screen name="Detail Pipeline" component={PipelineDetail} />
 		</Stack.Navigator>
@@ -68,7 +71,7 @@ const PipelineStackNavigator = () => {
 
 const RequestStackNavigator = () => {
 	return (
-		<Stack.Navigator screenOptions={{headerShown: false}}>
+		<Stack.Navigator screenOptions={{ headerShown: false }}>
 			<Stack.Screen name="Request" component={Request} />
 			<Stack.Screen name="Detail Request" component={RequestDetail} />
 		</Stack.Navigator>
@@ -77,7 +80,7 @@ const RequestStackNavigator = () => {
 
 const ProspectStackNavigator = () => {
 	return (
-		<Stack.Navigator screenOptions={{headerShown: false}}>
+		<Stack.Navigator screenOptions={{ headerShown: false }}>
 			<Stack.Screen name="Prospect" component={Prospect} />
 			<Stack.Screen name="Detail Prospect" component={ProspectDetail} />
 		</Stack.Navigator>
@@ -86,7 +89,7 @@ const ProspectStackNavigator = () => {
 
 const RenewalStackNavigator = () => {
 	return (
-		<Stack.Navigator screenOptions={{headerShown: false}}>
+		<Stack.Navigator screenOptions={{ headerShown: false }}>
 			<Stack.Screen name="Renewal" component={Renewal} />
 			<Stack.Screen name="Detail Renewal" component={RenewalDetail} />
 		</Stack.Navigator>
@@ -95,7 +98,7 @@ const RenewalStackNavigator = () => {
 
 const AcceptanceStackNavigator = () => {
 	return (
-		<Stack.Navigator screenOptions={{headerShown: false}}>
+		<Stack.Navigator screenOptions={{ headerShown: false }}>
 			<Stack.Screen name="Acceptance" component={Acceptance} />
 		</Stack.Navigator>
 	)
@@ -103,7 +106,7 @@ const AcceptanceStackNavigator = () => {
 
 const ProposalStackNavigator = () => {
 	return (
-		<Stack.Navigator screenOptions={{headerShown: false}}>
+		<Stack.Navigator screenOptions={{ headerShown: false }}>
 			<Stack.Screen name="Proposal" component={Proposal} />
 			<Stack.Screen name="Detail Proposal" component={ProposalDetail} />
 		</Stack.Navigator>
@@ -112,7 +115,7 @@ const ProposalStackNavigator = () => {
 
 const ReleaseStackNavigator = () => {
 	return (
-		<Stack.Navigator screenOptions={{headerShown: false}}>
+		<Stack.Navigator screenOptions={{ headerShown: false }}>
 			<Stack.Screen name="Release" component={Release} />
 			<Stack.Screen name="Detail Release" component={ReleaseDetail} />
 		</Stack.Navigator>
@@ -121,7 +124,7 @@ const ReleaseStackNavigator = () => {
 
 const PlacingStackNavigator = () => {
 	return (
-		<Stack.Navigator screenOptions={{headerShown: false}}>
+		<Stack.Navigator screenOptions={{ headerShown: false }}>
 			<Stack.Screen name="Placing" component={Placing} />
 			<Stack.Screen name="Detail Placing" component={PlacingDetail} />
 		</Stack.Navigator>
@@ -130,7 +133,7 @@ const PlacingStackNavigator = () => {
 
 const QuotationStackNavigator = () => {
 	return (
-		<Stack.Navigator screenOptions={{headerShown: false}}>
+		<Stack.Navigator screenOptions={{ headerShown: false }}>
 			<Stack.Screen name="Quotation" component={Quotation} />
 			<Stack.Screen name="Detail Quotation" component={QuotationDetail} />
 		</Stack.Navigator>
@@ -138,14 +141,14 @@ const QuotationStackNavigator = () => {
 }
 
 const ReimbursementStackNavigator = () => {
-	<Stack.Navigator screenOptions={{headerShown: false}}>
+	<Stack.Navigator screenOptions={{ headerShown: false }}>
 		<Stack.Screen name="Reimbursement" component={Reimbursement} />
 		<Stack.Screen name="Reimbursement Detail" component={ReimbursementDetail} />
 	</Stack.Navigator>
 }
 
 const CashlessStackNavigator = () => {
-	<Stack.Navigator screenOptions={{headerShown: false}}>
+	<Stack.Navigator screenOptions={{ headerShown: false }}>
 		<Stack.Screen name="Cashless" component={Cashless} />
 		<Stack.Screen name="Cashless Detail" component={CashlessDetail} />
 	</Stack.Navigator>
@@ -157,6 +160,16 @@ const SettingStackNavigator = () => {
 			<Stack.Screen name="Setting" component={Setting} />
 			<Stack.Screen name="Profile" component={Profile} />
 			<Stack.Screen name="ChangePass" component={ChangePass} />
+		</Stack.Navigator>
+	)
+}
+
+const CryptoStackNavigator = () => {
+	return (
+		<Stack.Navigator screenOptions={{ headerShown: false }}>
+			<Stack.Screen name="Home" component={Home} />
+			<Stack.Screen name="CryptoDetail" component={CryptoDetail}  />
+			<Stack.Screen name="Transaction" component={Transaction} />
 		</Stack.Navigator>
 	)
 }
@@ -175,4 +188,5 @@ export {
 	ReimbursementStackNavigator,
 	CashlessStackNavigator,
 	SettingStackNavigator,
+	CryptoStackNavigator
 }
