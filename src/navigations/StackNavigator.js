@@ -10,7 +10,6 @@ import {
 	Dashboard,
 	Home,
 	Issue,
-	Login,
 	Pipeline,
 	PipelineDetail,
 	Placing,
@@ -38,7 +37,7 @@ import {
 import { COLORS, FONTS } from '../constants';
 
 
-const Stack = createStackNavigator()
+const Stack = createStackNavigator();
 
 const screenOptionStyle = {
 	headerStyle: {
@@ -168,7 +167,7 @@ const CryptoStackNavigator = () => {
 	return (
 		<Stack.Navigator screenOptions={{ headerShown: false }}>
 			<Stack.Screen name="Home" component={Home} />
-			<Stack.Screen name="CryptoDetail" component={CryptoDetail}  />
+			<Stack.Screen name="CryptoDetail" component={CryptoDetail} />
 			<Stack.Screen name="Transaction" component={Transaction} />
 		</Stack.Navigator>
 	)

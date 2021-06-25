@@ -1,6 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
-import icons from '../constants/icons';
+import { Text, View, Image } from 'react-native';
 import { SIZES, FONTS, COLORS } from '../constants';
 
 const CurrencyLabel = ({ icon, currency, code }) => {

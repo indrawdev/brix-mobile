@@ -2,8 +2,8 @@ import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Image, FlatList } from 'react-native';
 
 import icons from '../constants/icons';
-import images from '../constants/images';
 import { SIZES, FONTS, COLORS } from '../constants';
+
 
 const TransactionHistory = ({ customContainerStyle, history }) => {
 

@@ -19,6 +19,7 @@ import {
 	ClaimTopTab
 } from './TopTabNavigator'
 
+import { TabIcon } from '../components';
 import icons from '../constants/icons';
 import { COLORS, FONTS } from '../constants';
 
@@ -45,151 +46,50 @@ const BottomTabNavigator = () => {
 				name="Dashboard"
 				component={DashboardStackNavigator}
 				options={{
-					tabBarIcon: ({ focused }) => (
-						<View
-							style={{
-								alignItems: 'center',
-								justifyContent: 'center'
-							}}
-						>
-							<Image
-								source={icons.home}
-								resizeMode="contain"
-								style={{
-									width: 25,
-									height: 25,
-									tintColor: focused ? COLORS.primary : COLORS.black
-								}}
-							/>
-							<Text
-								style={{
-									color: focused ? COLORS.primary : COLORS.black,
-									...FONTS.body5
-								}}
-							>Home</Text>
-						</View>
-					)
+					tabBarIcon: ({ focused }) =>
+						<TabIcon
+							focused={focused} icon={icons.home} label="Home"
+						/>
 				}}
 			/>
 			<Tab.Screen
 				name="Prospect"
 				component={ProspectTopTab}
 				options={{
-					tabBarIcon: ({ focused }) => (
-						<View
-							style={{
-								alignItems: 'center',
-								justifyContent: 'center'
-							}}
-						>
-							<Image
-								source={icons.line_graph}
-								resizeMode="contain"
-								style={{
-									width: 25,
-									height: 25,
-									tintColor: focused ? COLORS.primary : COLORS.black
-								}}
-							/>
-							<Text
-								style={{
-									color: focused ? COLORS.primary : COLORS.black,
-									...FONTS.body5
-								}}
-							>Prospect</Text>
-						</View>
-
-					)
+					tabBarIcon: ({ focused }) =>
+						<TabIcon
+							focused={focused} icon={icons.line_graph} label="Prospect"
+						/>
 				}}
 			/>
 			<Tab.Screen
 				name="Maintenance"
 				component={MaintenanceTopTab}
 				options={{
-					tabBarIcon: ({ focused }) => (
-						<View
-							style={{
-								alignItems: 'center',
-								justifyContent: 'center'
-							}}
-						>
-							<Image
-								source={icons.pie_chart}
-								resizeMode="contain"
-								style={{
-									width: 25,
-									height: 25,
-									tintColor: focused ? COLORS.primary : COLORS.black
-								}}
-							/>
-							<Text
-								style={{
-									color: focused ? COLORS.primary : COLORS.black,
-									...FONTS.body5
-								}}
-							>Maintenance</Text>
-						</View>
-					)
+					tabBarIcon: ({ focused }) =>
+						<TabIcon
+							focused={focused} icon={icons.pie_chart} label="Maintenance"
+						/>
 				}}
 			/>
 			<Tab.Screen
 				name="Placement"
 				component={PlacementTopTab}
 				options={{
-					tabBarIcon: ({ focused }) => (
-						<View
-							style={{
-								alignItems: 'center',
-								justifyContent: 'center'
-							}}
-						>
-							<Image
-								source={icons.settings}
-								resizeMode="contain"
-								style={{
-									width: 25,
-									height: 25,
-									tintColor: focused ? COLORS.primary : COLORS.black
-								}}
-							/>
-							<Text
-								style={{
-									color: focused ? COLORS.primary : COLORS.black,
-									...FONTS.body5
-								}}
-							>Setting</Text>
-						</View>
-					)
+					tabBarIcon: ({ focused }) =>
+						<TabIcon
+							focused={focused} icon={icons.settings} label="Setting"
+						/>
 				}}
 			/>
 			<Tab.Screen
 				name="Crypto"
 				component={CryptoStackNavigator}
 				options={{
-					tabBarIcon: ({ focused }) => (
-						<View
-							style={{
-								alignItems: 'center',
-								justifyContent: 'center'
-							}}
-						>
-							<Image
-								source={icons.transaction}
-								resizeMode="contain"
-								style={{
-									width: 25,
-									height: 25,
-									tintColor: focused ? COLORS.primary : COLORS.black
-								}}
-							/>
-							<Text
-								style={{
-									color: focused ? COLORS.primary : COLORS.black,
-									...FONTS.body5
-								}}
-							>Crypto</Text>
-						</View>
-					)
+					tabBarIcon: ({ focused }) =>
+						<TabIcon
+							focused={focused} icon={icons.transaction} label="Crypto"
+						/>
 				}}
 			/>
 		</Tab.Navigator>

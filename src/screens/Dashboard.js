@@ -17,7 +17,7 @@ import { featuresData, specialPromoData } from '../shared/dummy';
 const window = Dimensions.get("window");
 const screen = Dimensions.get("screen");
 
-const Dashboard = () => {
+const Dashboard = ({ navigation }) => {
 	const [isLoading, setLoading] = useState(true);
 	const [dimensions, setDimensions] = useState({ window, screen });
 

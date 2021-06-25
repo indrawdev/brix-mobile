@@ -8,7 +8,8 @@ import {
 	StyleSheet,
 	Image,
 	FlatList,
-	LogBox
+	LogBox,
+	ActivityIndicator
 } from 'react-native';
 import icons from '../constants/icons';
 import images from '../constants/images';
@@ -178,7 +179,12 @@ const Home = ({ navigation }) => {
 
 	function renderAlert() {
 		return (
-			<PriceAlert />
+			<PriceAlert
+				customContainerStyle={{
+					marginTop: SIZES.padding,
+					marginHorizontal: SIZES.radius
+				}}
+			/>
 		)
 	}
 
