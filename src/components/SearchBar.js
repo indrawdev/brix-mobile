@@ -4,17 +4,21 @@ import icons from '../constants/icons';
 import { SIZES, FONTS, COLORS } from '../constants';
 
 
-const SearchBar = ({ icon, currency, code }) => {
+const SearchBar = ({ label, value, onChage }) => {
 	return (
+		<View style={{
+			backgroundColor: COLORS.purple,
+			padding: SIZES.padding
+		}}>
 		<View
 			style={{
 				flexDirection: 'row',
 				height: 50,
 				alignItems: 'center',
-				marginHorizontal: SIZES.padding,
-				paddingHorizontal: SIZES.radius,
-				borderRadius: 10,
-				backgroundColor: COLORS.lightGray
+				marginHorizontal: SIZES.padding / 2,
+				paddingHorizontal: SIZES.radius / 2,
+				borderRadius: 3,
+				backgroundColor: COLORS.lightpurple
 			}}
 		>
 			<Image
@@ -22,20 +26,23 @@ const SearchBar = ({ icon, currency, code }) => {
 				style={{
 					width: 20,
 					height: 20,
-					tintColor: COLORS.gray
+					tintColor: COLORS.white
 				}}
 			/>
 
 			<TextInput
 				style={{
-					marginLeft: SIZES.radius,
+					marginLeft: SIZES.radius / 2,
 					width: '100%',
-					...FONTS.body3
+					...FONTS.body3,
+					color: COLORS.white
 				}}
 				placeholderTextColor={COLORS.gray}
 				placeholder="Search"
 			/>
 		</View>
+		</View>
+		
 	)
 }
 

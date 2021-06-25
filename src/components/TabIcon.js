@@ -18,12 +18,12 @@ const TabIcon = ({ focused, icon, label }) => {
 				style={{
 					width: 25,
 					height: 25,
-					tintColor: focused ? COLORS.primary : COLORS.black
+					tintColor: focused ? COLORS.secondary : COLORS.black
 				}}
 			/>
 			<Text
 				style={{
-					color: focused ? COLORS.primary : COLORS.black,
+					color: focused ? COLORS.secondary : COLORS.black,
 					...FONTS.body5
 				}}
 			>{label}</Text>
@@ -37,7 +37,7 @@ const TabIcon = ({ focused, icon, label }) => {
 					height: 5,
 					borderTopLeftRadius: 5,
 					borderTopRightRadius: 5,
-					backgroundColor: COLORS.primary
+					backgroundColor: COLORS.secondary
 				}}
 			/>}
 

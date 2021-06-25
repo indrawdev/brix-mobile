@@ -21,7 +21,9 @@ const tabBarOptionsStyle = {
 		alignSelf: 'center',
 	},
 	activeTintColor: COLORS.white,
-	style: { backgroundColor: COLORS.purple },
+	inactiveTintColor: COLORS.gray,
+	style: { backgroundColor: COLORS.primary },
+	indicatorStyle: { backgroundColor: COLORS.primary, height: '100%' },
 }
 
 const ProspectTopTab = () => {

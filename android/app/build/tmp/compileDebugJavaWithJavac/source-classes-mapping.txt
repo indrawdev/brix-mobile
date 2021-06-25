@@ -1,0 +1,14 @@
+com/brixmobile/ReactNativeFlipper.java
+ com.brixmobile.ReactNativeFlipper
+ com.brixmobile.ReactNativeFlipper$1
+ com.brixmobile.ReactNativeFlipper$2
+ com.brixmobile.ReactNativeFlipper$2$1
+com/brixmobile/MainActivity.java
+ com.brixmobile.MainActivity
+com/brixmobile/MainApplication.java
+ com.brixmobile.MainApplication
+ com.brixmobile.MainApplication$1
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList
+com/brixmobile/BuildConfig.java
+ com.brixmobile.BuildConfig

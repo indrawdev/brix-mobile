@@ -98,7 +98,7 @@ const BottomTabNavigator = () => {
 
 const styles = StyleSheet.create({
 	shadow: {
-		shadowColor: COLORS.primary,
+		shadowColor: COLORS.black,
 		shadowOffset: {
 			width: 0,
 			height: 10,

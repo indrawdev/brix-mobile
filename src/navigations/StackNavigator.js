@@ -41,14 +41,10 @@ const Stack = createStackNavigator();
 
 const screenOptionStyle = {
 	headerStyle: {
-		backgroundColor: COLORS.purple,
+		backgroundColor: COLORS.primary,
 	},
 	headerTintColor: COLORS.white,
-	headerTitleStyle: {
-		alignSelf: 'center',
-		fontWeight: 'normal',
-		fontFamily: 'Roboto-Bold'
-	}
+	headerTitleStyle: {...FONTS.h2}
 }
 
 const DashboardStackNavigator = () => {
