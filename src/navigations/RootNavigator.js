@@ -1,17 +1,19 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Login } from '../screens';
-import BottomTabNavigator from '../navigations/BottomTabNavigator';
+import { Startup, Login } from '../screens';
+import BottomTabNavigator from './BottomTabNavigator';
 
 const Stack = createStackNavigator();
-
 
 const RootNavigator = () => {
 	return (
 		<Stack.Navigator screenOptions={{ headerShown: false }}>
-			<Stack.Screen name="Dashboard" component={BottomTabNavigator} />
+			<Stack.Screen name="Startup" component={Startup} />
 			<Stack.Screen name="Login" component={Login} />
-
+			<Stack.Screen
+				name="Main"
+				component={BottomTabNavigator}
+			/>
 		</Stack.Navigator>
 	)
 }

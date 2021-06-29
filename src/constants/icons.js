@@ -2,6 +2,7 @@ const back = require("../assets/icons/back.png");
 const bell = require("../assets/icons/bell.png");
 const bill = require("../assets/icons/bill.png");
 const close = require("../assets/icons/close.png");
+const drawer = require("../assets/icons/drawer.png");
 const disable_eye = require("../assets/icons/disable_eye.png");
 const down = require("../assets/icons/down.png");
 const eye = require("../assets/icons/eye.png")
@@ -36,6 +37,7 @@ export default {
 	bill,
 	close,
 	disable_eye,
+	drawer,
 	down,
 	eye,
 	game,

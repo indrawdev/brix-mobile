@@ -4,7 +4,7 @@ import icons from '../constants/icons';
 import { SIZES, FONTS, COLORS } from '../constants';
 
 
-const SearchBar = ({ label, value, onChage }) => {
+const SearchBar = ({ label, value, onChangeText }) => {
 	return (
 		<View style={{
 			backgroundColor: COLORS.purple,
@@ -31,14 +31,16 @@ const SearchBar = ({ label, value, onChage }) => {
 			/>
 
 			<TextInput
-				style={{
-					marginLeft: SIZES.radius / 2,
-					width: '100%',
-					...FONTS.body3,
-					color: COLORS.white
-				}}
-				placeholderTextColor={COLORS.gray}
-				placeholder="Search"
+					style={{
+						marginLeft: SIZES.radius / 2,
+						width: '100%',
+						...FONTS.body3,
+						color: COLORS.white
+					}}
+					placeholderTextColor={COLORS.gray}
+					placeholder={label}
+					value={value}
+					onChangeText={ onChangeText}
 			/>
 		</View>
 		</View>

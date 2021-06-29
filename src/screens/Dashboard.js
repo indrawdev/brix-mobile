@@ -8,20 +8,34 @@ import {
 	TouchableOpacity,
 	Alert
 } from "react-native"
-import { Dimensions } from "react-native";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import icons from '../constants/icons';
 import images from '../constants/images';
 import { SIZES, FONTS, COLORS } from '../constants';
 import { specialPromoData } from '../shared/dummy';
 import { MenuIcon, StatusTopBar } from '../components';
 
-const window = Dimensions.get("window");
-const screen = Dimensions.get("screen");
-
 const Dashboard = ({ navigation }) => {
 	const [isLoading, setLoading] = useState(true);
-	const [dimensions, setDimensions] = useState({ window, screen });
+	const [email, setEmail] = useState('');
 	const [specialPromos, setspecialPromos] = useState(specialPromoData);
+
+	useEffect(() => {
+		const tryLogin = async () => {
+			const userData = await AsyncStorage.getItem('userData');
+			console.log(userData);
+		}
+		tryLogin();
+	}, [])
+
+	const getData = async () => {
+		try {
+			const jsonValue = await AsyncStorage.getItem('userData')
+			return jsonValue != null ? JSON.parse(jsonValue) : null;
+		} catch(e) {
+			console.log(e);
+		}
+	}
 
 
 	function renderHeader() {
@@ -29,7 +43,7 @@ const Dashboard = ({ navigation }) => {
 			<View style={{ flexDirection: 'row', marginVertical: SIZES.padding * 2 }}>
 				<View style={{ flex: 1 }}>
 					<Text style={{ ...FONTS.h1 }}>Hello!</Text>
-					<Text style={{ ...FONTS.body2, color: COLORS.gray }}>ByProgrammers</Text>
+					<Text style={{ ...FONTS.body2, color: COLORS.gray }}>{email}</Text>
 				</View>
 				<View style={{ alignItems: 'center', justifyContent: 'center' }}>
 					<TouchableOpacity
@@ -171,6 +185,7 @@ const Dashboard = ({ navigation }) => {
 		</SafeAreaView>
 	);
 };
+
 
 
 export default Dashboard;

@@ -8,56 +8,56 @@ export const featuresData = [
 		icon: icons.reload,
 		color: COLORS.white,
 		backgroundColor: COLORS.lightpurple,
-		description: "Top Up"
+		description: "Pipeline"
 	},
 	{
 		id: 2,
 		icon: icons.send,
 		color: COLORS.white,
 		backgroundColor: COLORS.lightpurple,
-		description: "Transfer"
+		description: "Request"
 	},
 	{
 		id: 3,
 		icon: icons.internet,
 		color: COLORS.white,
 		backgroundColor: COLORS.lightpurple,
-		description: "Internet"
+		description: "Accept"
 	},
 	{
 		id: 4,
 		icon: icons.wallet,
 		color: COLORS.white,
 		backgroundColor: COLORS.lightpurple,
-		description: "Wallet"
+		description: "Release"
 	},
 	{
 		id: 5,
 		icon: icons.bill,
 		color: COLORS.white,
 		backgroundColor: COLORS.lightpurple,
-		description: "Bill"
+		description: "Renewal"
 	},
 	{
 		id: 6,
 		icon: icons.game,
 		color: COLORS.white,
 		backgroundColor: COLORS.lightpurple,
-		description: "Games"
+		description: "Proposal"
 	},
 	{
 		id: 7,
 		icon: icons.phone,
 		color: COLORS.white,
 		backgroundColor: COLORS.lightpurple,
-		description: "Mobile Prepaid"
+		description: "Placing"
 	},
 	{
 		id: 8,
 		icon: icons.more,
 		color: COLORS.white,
 		backgroundColor: COLORS.lightpurple,
-		description: "More"
+		description: "Quotation"
 	},
 ];
 

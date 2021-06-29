@@ -43,7 +43,7 @@ const BottomTabNavigator = () => {
 			}}
 		>
 			<Tab.Screen
-				name="Dashboard"
+				name="Home"
 				component={DashboardStackNavigator}
 				options={{
 					tabBarIcon: ({ focused }) =>

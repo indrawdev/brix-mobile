@@ -6,6 +6,8 @@ import {
 	Cashless,
 	CashlessDetail,
 	ChangePass,
+	Client,
+	ClientDetail,
 	CryptoDetail,
 	Dashboard,
 	Home,
@@ -35,6 +37,7 @@ import {
 } from '../screens';
 
 import { COLORS, FONTS } from '../constants';
+import { LogoTitle, HeaderRight } from '../components';
 
 
 const Stack = createStackNavigator();
@@ -49,8 +52,15 @@ const screenOptionStyle = {
 
 const DashboardStackNavigator = () => {
 	return (
-		<Stack.Navigator screenOptions={screenOptionStyle}>
-			<Stack.Screen name="Dashboard" component={Dashboard} />
+		<Stack.Navigator screenOptions={({navigation}) => ({
+			headerLeft: () => <HeaderRight navigation={navigation} />,
+		})}>
+			<Stack.Screen
+				name="Dashboard"
+				component={Dashboard}
+				options={{
+					headerTitle: <LogoTitle />,
+				}}/>
 		</Stack.Navigator>
 	)
 }
@@ -159,6 +169,15 @@ const SettingStackNavigator = () => {
 	)
 }
 
+const ClientStackNavigator = () => {
+	return (
+		<Stack.Navigator screenOptions={screenOptionStyle}>
+			<Stack.Screen name="Client" component={Client} />
+			<Stack.Screen name="ClientDetail" component={ClientDetail} />
+		</Stack.Navigator>
+	)
+}
+
 const CryptoStackNavigator = () => {
 	return (
 		<Stack.Navigator screenOptions={{ headerShown: false }}>
@@ -183,5 +202,6 @@ export {
 	ReimbursementStackNavigator,
 	CashlessStackNavigator,
 	SettingStackNavigator,
+	ClientStackNavigator,
 	CryptoStackNavigator
 }

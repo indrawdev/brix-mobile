@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import { store } from './redux';
 import { NavigationContainer } from '@react-navigation/native';
 import RootNavigator from './navigations/RootNavigator';
-import DrawerNavigator from './navigations/DrawerNavigator';
 
 export default function App() {
 	return (

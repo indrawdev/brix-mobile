@@ -1,7 +1,9 @@
 import Acceptance from './Acceptance';
-import Cashless from './Cashless';
+import Cashless from '../../Cashless';
 import CashlessDetail from './CashlessDetail';
 import ChangePass from './ChangePass';
+import Client from './Client';
+import ClientDetail from './ClientDetail';
 import CryptoDetail from './CryptoDetail';
 import Dashboard from './Dashboard';
 import Home from './Home';
@@ -27,7 +29,10 @@ import RenewalDetail from './ReleaseDetail';
 import Request from './Request';
 import RequestDetail from './RequestDetail';
 import Setting from './Setting';
+import Splash from './Splash';
+import Startup from './Startup';
 import Timesheet from './Timesheet';
+import TimesheetDetail from './TimesheetDetail';
 import Transaction from './Transaction';
 
 export {
@@ -35,6 +40,8 @@ export {
 	Cashless,
 	CashlessDetail,
 	ChangePass,
+	Client,
+	ClientDetail,
 	CryptoDetail,
 	Dashboard,
 	Home,
@@ -60,6 +67,9 @@ export {
 	Request,
 	RequestDetail,
 	Setting,
+	Splash,
+	Startup,
 	Timesheet,
+	TimesheetDetail,
 	Transaction
 }

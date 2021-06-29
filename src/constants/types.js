@@ -1,9 +1,11 @@
+export const INPUT_CHANGE = 'INPUT_CHANGE';
+export const INPUT_BLUR = 'INPUT_BLUR';
+export const FORM_INPUT_UPDATE = 'FORM_INPUT_UPDATE';
+
 // AUTH
 export const LOGIN = 'LOGIN';
 export const LOGOUT = 'LOGOUT';
-export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
-export const LOGIN_FAILED = 'LOGIN_FAILED';
-export const LOGIN_ERROR = 'LOGIN_ERROR';
+export const AUTHENTICATE = 'AUTHENTICATE';
 
 // MAIN
 export const PIPELINES_LOADING = 'PIPELINES_LOADING';
