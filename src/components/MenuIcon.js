@@ -3,7 +3,9 @@ import { Text, View, Image, FlatList, TouchableOpacity, Alert} from 'react-nativ
 import { SIZES, FONTS, COLORS } from '../constants';
 import { featuresData } from '../shared/dummy';
 
-const MenuIcon = () => {
+const MenuIcon = props => {
+
+	const { item } = props;
 
 	const [features, setFeatures] = useState(featuresData);
 
@@ -16,7 +18,7 @@ const MenuIcon = () => {
 	const renderItem = ({ item }) => (
 		<TouchableOpacity
 			style={{ marginBottom: SIZES.padding * 2, width: 60, alignItems: 'center' }}
-			onPress={() => Alert.alert(item.description)}
+			onPress={() => ''}
 		>
 			<View
 				style={{

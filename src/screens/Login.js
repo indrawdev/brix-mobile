@@ -15,7 +15,7 @@ import { COLORS, SIZES, FONTS } from '../constants';
 
 import { useDispatch } from 'react-redux';
 import { StatusTopBar } from '../components';
-import * as authActions from '../redux/actions';
+import * as authActions from '../redux/actions/auth';
 import { FORM_INPUT_UPDATE } from '../constants/types';
 import { Input } from '../components/UI';
 import { Loading } from '../components';

@@ -7,6 +7,10 @@ export const LOGIN = 'LOGIN';
 export const LOGOUT = 'LOGOUT';
 export const AUTHENTICATE = 'AUTHENTICATE';
 
+// CLIENT
+export const SET_CLIENTS = 'SET_CLIENTS';
+
+
 // MAIN
 export const PIPELINES_LOADING = 'PIPELINES_LOADING';
 export const PIPELINES_FAILED = 'PIPELINES_FAILED';

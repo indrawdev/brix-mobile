@@ -1,5 +1,6 @@
 import Acceptance from './Acceptance';
-import Cashless from '../../Cashless';
+import Account from './Account';
+import Cashless from './Cashless';
 import CashlessDetail from './CashlessDetail';
 import ChangePass from './ChangePass';
 import Client from './Client';
@@ -9,6 +10,7 @@ import Dashboard from './Dashboard';
 import Home from './Home';
 import Issue from './Issue';
 import Login from './Login';
+import Notification from './Notification';
 import Pipeline from './Pipeline';
 import PipelineDetail from './PipelineDetail';
 import Placing from './Placing';
@@ -28,7 +30,6 @@ import Renewal from './Renewal';
 import RenewalDetail from './ReleaseDetail';
 import Request from './Request';
 import RequestDetail from './RequestDetail';
-import Setting from './Setting';
 import Splash from './Splash';
 import Startup from './Startup';
 import Timesheet from './Timesheet';
@@ -37,6 +38,7 @@ import Transaction from './Transaction';
 
 export {
 	Acceptance,
+	Account,
 	Cashless,
 	CashlessDetail,
 	ChangePass,
@@ -47,6 +49,7 @@ export {
 	Home,
 	Issue,
 	Login,
+	Notification,
 	Pipeline,
 	PipelineDetail,
 	Placing,
@@ -66,7 +69,6 @@ export {
 	RenewalDetail,
 	Request,
 	RequestDetail,
-	Setting,
 	Splash,
 	Startup,
 	Timesheet,

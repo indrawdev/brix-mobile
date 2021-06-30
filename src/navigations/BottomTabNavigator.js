@@ -8,20 +8,14 @@ import Svg, {
 
 import {
 	DashboardStackNavigator,
-	SettingStackNavigator,
-	CryptoStackNavigator
+	ClientStackNavigator,
+	NotificationStackNavigator,
+	AccountStackNavigator
 } from './StackNavigator'
-
-import {
-	ProspectTopTab,
-	MaintenanceTopTab,
-	PlacementTopTab,
-	ClaimTopTab
-} from './TopTabNavigator'
 
 import { TabIcon } from '../components';
 import icons from '../constants/icons';
-import { COLORS, FONTS } from '../constants';
+import { COLORS } from '../constants';
 
 const Tab = createBottomTabNavigator()
 
@@ -53,42 +47,33 @@ const BottomTabNavigator = () => {
 				}}
 			/>
 			<Tab.Screen
-				name="Prospect"
-				component={ProspectTopTab}
+				name="Client"
+				component={ClientStackNavigator}
 				options={{
 					tabBarIcon: ({ focused }) =>
 						<TabIcon
-							focused={focused} icon={icons.line_graph} label="Prospect"
+							focused={focused} icon={icons.pie_chart} label="Clients"
 						/>
 				}}
 			/>
 			<Tab.Screen
-				name="Maintenance"
-				component={MaintenanceTopTab}
+				name="Notification"
+				component={NotificationStackNavigator}
 				options={{
 					tabBarIcon: ({ focused }) =>
 						<TabIcon
-							focused={focused} icon={icons.pie_chart} label="Maintenance"
+							focused={focused} icon={icons.line_graph} label="Notification"
 						/>
 				}}
 			/>
+
 			<Tab.Screen
-				name="Placement"
-				component={PlacementTopTab}
+				name="Account"
+				component={AccountStackNavigator}
 				options={{
 					tabBarIcon: ({ focused }) =>
 						<TabIcon
-							focused={focused} icon={icons.settings} label="Setting"
-						/>
-				}}
-			/>
-			<Tab.Screen
-				name="Crypto"
-				component={CryptoStackNavigator}
-				options={{
-					tabBarIcon: ({ focused }) =>
-						<TabIcon
-							focused={focused} icon={icons.transaction} label="Crypto"
+							focused={focused} icon={icons.settings} label="Account"
 						/>
 				}}
 			/>

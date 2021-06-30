@@ -6,7 +6,6 @@ import {
 	Image,
 	FlatList,
 	TouchableOpacity,
-	Alert
 } from "react-native"
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import icons from '../constants/icons';
@@ -23,6 +22,7 @@ const Dashboard = ({ navigation }) => {
 	useEffect(() => {
 		const tryLogin = async () => {
 			const userData = await AsyncStorage.getItem('userData');
+			setEmail(userData.data.email);
 			console.log(userData);
 		}
 		tryLogin();

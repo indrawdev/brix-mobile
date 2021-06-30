@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import {
 	Acceptance,
+	Account,
 	Cashless,
 	CashlessDetail,
 	ChangePass,
@@ -12,6 +13,7 @@ import {
 	Dashboard,
 	Home,
 	Issue,
+	Notification,
 	Pipeline,
 	PipelineDetail,
 	Placing,
@@ -31,13 +33,12 @@ import {
 	RenewalDetail,
 	Request,
 	RequestDetail,
-	Setting,
 	Timesheet,
 	Transaction
 } from '../screens';
 
 import { COLORS, FONTS } from '../constants';
-import { LogoTitle, HeaderRight } from '../components';
+// import { LogoTitle, HeaderRight } from '../components';
 
 
 const Stack = createStackNavigator();
@@ -47,20 +48,37 @@ const screenOptionStyle = {
 		backgroundColor: COLORS.primary,
 	},
 	headerTintColor: COLORS.white,
-	headerTitleStyle: {...FONTS.h2}
+	headerTitleStyle: { ...FONTS.h2 }
 }
 
 const DashboardStackNavigator = () => {
 	return (
-		<Stack.Navigator screenOptions={({navigation}) => ({
-			headerLeft: () => <HeaderRight navigation={navigation} />,
-		})}>
+		<Stack.Navigator screenOptions={{ headerShown: false }}>
 			<Stack.Screen
 				name="Dashboard"
 				component={Dashboard}
-				options={{
-					headerTitle: <LogoTitle />,
-				}}/>
+			/>
+		</Stack.Navigator>
+	)
+}
+
+const ClientStackNavigator = () => {
+	return (
+		<Stack.Navigator screenOptions={screenOptionStyle}>
+			<Stack.Screen name="Client" component={Client} />
+			<Stack.Screen name="ClientDetail" component={ClientDetail} />
+		</Stack.Navigator>
+	)
+}
+
+
+const NotificationStackNavigator = () => {
+	return (
+		<Stack.Navigator screenOptions={screenOptionStyle}>
+			<Stack.Screen
+				name="Notification"
+				component={Notification}
+			/>
 		</Stack.Navigator>
 	)
 }
@@ -159,21 +177,10 @@ const CashlessStackNavigator = () => {
 	</Stack.Navigator>
 }
 
-const SettingStackNavigator = () => {
+const AccountStackNavigator = () => {
 	return (
 		<Stack.Navigator screenOptions={screenOptionStyle}>
-			<Stack.Screen name="Setting" component={Setting} />
-			<Stack.Screen name="Profile" component={Profile} />
-			<Stack.Screen name="ChangePass" component={ChangePass} />
-		</Stack.Navigator>
-	)
-}
-
-const ClientStackNavigator = () => {
-	return (
-		<Stack.Navigator screenOptions={screenOptionStyle}>
-			<Stack.Screen name="Client" component={Client} />
-			<Stack.Screen name="ClientDetail" component={ClientDetail} />
+			<Stack.Screen name="Account" component={Account} />
 		</Stack.Navigator>
 	)
 }
@@ -190,6 +197,9 @@ const CryptoStackNavigator = () => {
 
 export {
 	DashboardStackNavigator,
+	ClientStackNavigator,
+	NotificationStackNavigator,
+	AccountStackNavigator,
 	PipelineStackNavigator,
 	RequestStackNavigator,
 	ProspectStackNavigator,
@@ -201,7 +211,5 @@ export {
 	QuotationStackNavigator,
 	ReimbursementStackNavigator,
 	CashlessStackNavigator,
-	SettingStackNavigator,
-	ClientStackNavigator,
 	CryptoStackNavigator
 }

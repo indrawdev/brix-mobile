@@ -3,6 +3,7 @@ const API_URL = 'https://api.integra.co.id/';
 
 //API End Points
 const LOGIN_URL = `${API_URL}v1/login`;
+const CLIENTS_URL = `${API_URL}v1/clients`;
 const PIPELINES_URL = `${API_URL}v3/pipelines`;
 const PROSPECTS_URL = `${API_URL}v3/prospects`;
 const REQUESTS_URL = `${API_URL}v3/requests`;
@@ -14,6 +15,7 @@ const QUOTATIONS_URL = `${API_URL}v3/quotations`;
 
 const api = {
 	LOGIN_URL,
+	CLIENTS_URL,
 	PIPELINES_URL,
 	PROSPECTS_URL,
 	REQUESTS_URL,
