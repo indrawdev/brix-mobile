@@ -1,16 +1,19 @@
 import Client from '../../models/client';
 import { SET_CLIENTS } from '../../constants/types';
-import { CLIENTS_URL } from '../../constants/api';
+import api from '../../constants/api';
 
 export const fetchClients = () => {
 	return async (dispatch, getState) => {
 
-		const userId = getState().auth.userId;
-		const accessToken = getState().auth.accessToken;
+		// const userId = getState().auth.userId;
+		const accessToken = getState().auth.token;
 
 		try {
-			const response = await fetch(CLIENTS_URL, {
-				
+			const response = await fetch(api.CLIENTS_URL, {
+				method: 'GET',
+				headers: {
+					'Authorization': 'Bearer ' + accessToken
+				}
 			});
 
 			if (!response.ok) {
@@ -20,24 +23,22 @@ export const fetchClients = () => {
 			const resData = await response.json();
 			const loadedClients = [];
 
-			for (const key in resData) {
+			for (const key in resData.data.rows) {
 				loadedClients.push(
 					new Client(
-						resData[key].client_id,
-						resData[key].client_name,
-						resData[key].client_type,
-						resData[key].client_address,
+						resData.data.rows[key].client_id,
+						resData.data.rows[key].client_name,
+						resData.data.rows[key].client_type,
+						resData.data.rows[key].client_address1,
 					)
 				);
 			}
 
 			dispatch({
 				type: SET_CLIENTS,
-				clients: loadedClients,
-				// userProducts: loadedClients.filter(prod => prod.ownerId === userId)
+				clients: loadedClients
 			});
 		} catch (err) {
-			// send to custom analytics server
 			throw err;
 		}
 	}

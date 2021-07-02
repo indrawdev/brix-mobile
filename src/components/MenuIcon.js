@@ -5,8 +5,6 @@ import { featuresData } from '../shared/dummy';
 
 const MenuIcon = props => {
 
-	const { item } = props;
-
 	const [features, setFeatures] = useState(featuresData);
 
 	const Header = () => (
@@ -18,7 +16,7 @@ const MenuIcon = props => {
 	const renderItem = ({ item }) => (
 		<TouchableOpacity
 			style={{ marginBottom: SIZES.padding * 2, width: 60, alignItems: 'center' }}
-			onPress={() => ''}
+			onPress={() => props.navigation.navigate(item.url)}
 		>
 			<View
 				style={{

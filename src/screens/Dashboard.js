@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import {
 	SafeAreaView,
 	View,
@@ -6,36 +6,31 @@ import {
 	Image,
 	FlatList,
 	TouchableOpacity,
+	Button
 } from "react-native"
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import icons from '../constants/icons';
 import images from '../constants/images';
 import { SIZES, FONTS, COLORS } from '../constants';
 import { specialPromoData } from '../shared/dummy';
-import { MenuIcon, StatusTopBar } from '../components';
+import { MenuIcon, StatusTopBar, LogoTitle } from '../components';
 
-const Dashboard = ({ navigation }) => {
+const Dashboard = props => {
 	const [isLoading, setLoading] = useState(true);
 	const [email, setEmail] = useState('');
 	const [specialPromos, setspecialPromos] = useState(specialPromoData);
 
-	useEffect(() => {
-		const tryLogin = async () => {
-			const userData = await AsyncStorage.getItem('userData');
-			setEmail(userData.data.email);
-			console.log(userData);
-		}
-		tryLogin();
-	}, [])
-
-	const getData = async () => {
-		try {
-			const jsonValue = await AsyncStorage.getItem('userData')
-			return jsonValue != null ? JSON.parse(jsonValue) : null;
-		} catch(e) {
-			console.log(e);
-		}
-	}
+	useLayoutEffect(() => {
+		props.navigation.setOptions({
+			headerTitle: props => <LogoTitle {...props} />,
+			headerLeft: () => (
+				<Button
+					onPress={() => alert('This is a button!')}
+					title="Info"
+					color="#fff"
+				/>
+			),
+		})
+	}, [props.navigation])
 
 
 	function renderHeader() {
@@ -84,7 +79,7 @@ const Dashboard = ({ navigation }) => {
 
 	function renderFeatures() {
 		return (
-			<MenuIcon />
+			<MenuIcon {...props} />
 		)
 	}
 
@@ -185,7 +180,5 @@ const Dashboard = ({ navigation }) => {
 		</SafeAreaView>
 	);
 };
-
-
 
 export default Dashboard;

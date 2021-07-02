@@ -53,10 +53,14 @@ const screenOptionStyle = {
 
 const DashboardStackNavigator = () => {
 	return (
-		<Stack.Navigator screenOptions={{ headerShown: false }}>
+		<Stack.Navigator screenOptions={screenOptionStyle}>
 			<Stack.Screen
 				name="Dashboard"
 				component={Dashboard}
+			/>
+			<Stack.Screen
+				name="Pipeline"
+				component={Pipeline}
 			/>
 		</Stack.Navigator>
 	)

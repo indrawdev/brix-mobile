@@ -34,7 +34,6 @@ export const login = (email, password) => {
 		}
 
 		const resData = await response.json();
-		console.log(resData);
 		dispatch(authenticate(resData.data.user_id, resData.accessToken, parseInt(resData.expire)));
 
 		const expirationDate = new Date(

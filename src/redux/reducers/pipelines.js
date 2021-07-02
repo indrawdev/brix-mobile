@@ -1,14 +1,14 @@
-import { SET_CLIENTS } from '../../constants/types';
+import { SET_PIPELINES } from '../../constants/types';
 
 const initialState = {
-	availableClients: [],
+	availablePipelines: [],
 };
 
 export default (state = initialState, action) => {
 	switch (action.type) {
-		case SET_CLIENTS:
+		case SET_PIPELINES:
 			return {
-				availableClients: action.clients,
+				availablePipelines: action.pipelines,
 			};
 		default:
 			return state;

@@ -8,56 +8,64 @@ export const featuresData = [
 		icon: icons.reload,
 		color: COLORS.white,
 		backgroundColor: COLORS.lightpurple,
-		description: "Pipeline"
+		description: "Pipeline",
+		url: "Pipeline"
 	},
 	{
 		id: 2,
 		icon: icons.send,
 		color: COLORS.white,
 		backgroundColor: COLORS.lightpurple,
-		description: "Request"
+		description: "Request",
+		url: "Request"
 	},
 	{
 		id: 3,
 		icon: icons.internet,
 		color: COLORS.white,
 		backgroundColor: COLORS.lightpurple,
-		description: "Accept"
+		description: "Accept",
+		url: "Acceptance"
 	},
 	{
 		id: 4,
 		icon: icons.wallet,
 		color: COLORS.white,
 		backgroundColor: COLORS.lightpurple,
-		description: "Release"
+		description: "Release",
+		url: "Release"
 	},
 	{
 		id: 5,
 		icon: icons.bill,
 		color: COLORS.white,
 		backgroundColor: COLORS.lightpurple,
-		description: "Renewal"
+		description: "Renewal",
+		url: "Renewal"
 	},
 	{
 		id: 6,
 		icon: icons.game,
 		color: COLORS.white,
 		backgroundColor: COLORS.lightpurple,
-		description: "Proposal"
+		description: "Proposal",
+		url: "Proposal"
 	},
 	{
 		id: 7,
 		icon: icons.phone,
 		color: COLORS.white,
 		backgroundColor: COLORS.lightpurple,
-		description: "Placing"
+		description: "Placing",
+		url: "Placing"
 	},
 	{
 		id: 8,
 		icon: icons.more,
 		color: COLORS.white,
 		backgroundColor: COLORS.lightpurple,
-		description: "Quotation"
+		description: "Quotation",
+		url: "Quotation"
 	},
 ];
 
