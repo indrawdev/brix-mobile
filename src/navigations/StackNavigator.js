@@ -60,7 +60,35 @@ const DashboardStackNavigator = () => {
 			/>
 			<Stack.Screen
 				name="Pipeline"
-				component={Pipeline}
+				component={PipelineStackNavigator}
+			/>
+			<Stack.Screen
+				name="Request"
+				component={RequestStackNavigator}
+			/>
+			<Stack.Screen
+				name="Acceptance"
+				component={AcceptanceStackNavigator}
+			/>
+			<Stack.Screen
+				name="Release"
+				component={ReleaseStackNavigator}
+			/>
+			<Stack.Screen
+				name="Renewal"
+				component={RenewalStackNavigator}
+			/>
+			<Stack.Screen
+				name="Proposal"
+				component={ProposalStackNavigator}
+			/>
+			<Stack.Screen
+				name="Placing"
+				component={PlacingStackNavigator}
+			/>
+			<Stack.Screen
+				name="Quotation"
+				component={QuotationStackNavigator}
 			/>
 		</Stack.Navigator>
 	)

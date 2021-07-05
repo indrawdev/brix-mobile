@@ -1,4 +1,4 @@
-class Request {
+class Release {
 	constructor(request_id, pipeline_id, request_code, business_type, type_cover, allocated_budget) {
 		this.request_id = request_id;
     this.pipeline_id = pipeline_id;
@@ -9,4 +9,4 @@ class Request {
   }
 }
 
-export default Request;
+export default Release;

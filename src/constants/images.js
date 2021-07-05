@@ -16,7 +16,6 @@ export default {
 	focus,
 	usFlag,
 	integra,
-
 	banner,
 	bitcoin,
 	ethereum,

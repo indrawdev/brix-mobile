@@ -3,6 +3,7 @@ const bell = require("../assets/icons/bell.png");
 const bill = require("../assets/icons/bill.png");
 const close = require("../assets/icons/close.png");
 const drawer = require("../assets/icons/drawer.png");
+const drawer_white = require("../assets/icons/drawer_white.png");
 const disable_eye = require("../assets/icons/disable_eye.png");
 const down = require("../assets/icons/down.png");
 const eye = require("../assets/icons/eye.png")
@@ -38,6 +39,7 @@ export default {
 	close,
 	disable_eye,
 	drawer,
+	drawer_white,
 	down,
 	eye,
 	game,
@@ -51,7 +53,6 @@ export default {
 	send,
 	user,
 	wallet,
-
 	back_arrow,
 	bookmark,
 	home,

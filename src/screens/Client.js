@@ -5,6 +5,7 @@ import { LogoTitle, SearchBar } from '../components';
 import * as clientsActions from '../redux/actions/client';
 import { ClientItem } from '../components/user';
 import { COLORS } from '../constants';
+import NavigationDrawer from '../components/NavigationDrawer';
 
 const Client = props => {
 	const [isLoading, setIsLoading] = useState(false);
@@ -30,11 +31,7 @@ const Client = props => {
 		props.navigation.setOptions({
 			headerTitle: props => <LogoTitle {...props} />,
 			headerLeft: () => (
-				<Button
-					onPress={() => console.log('Press')}
-					title="Info"
-					color="#fff"
-				/>
+				<NavigationDrawer {...props} />
 			),
 		})
 	}, [props.navigation]);

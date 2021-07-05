@@ -6,13 +6,13 @@ import {
 	Image,
 	FlatList,
 	TouchableOpacity,
-	Button
-} from "react-native"
+} from "react-native";
 import icons from '../constants/icons';
 import images from '../constants/images';
 import { SIZES, FONTS, COLORS } from '../constants';
 import { specialPromoData } from '../shared/dummy';
 import { MenuIcon, StatusTopBar, LogoTitle } from '../components';
+import NavigationDrawer from '../components/NavigationDrawer';
 
 const Dashboard = props => {
 	const [isLoading, setLoading] = useState(true);
@@ -23,11 +23,7 @@ const Dashboard = props => {
 		props.navigation.setOptions({
 			headerTitle: props => <LogoTitle {...props} />,
 			headerLeft: () => (
-				<Button
-					onPress={() => alert('This is a button!')}
-					title="Info"
-					color="#fff"
-				/>
+				<NavigationDrawer {...props} />
 			),
 		})
 	}, [props.navigation])

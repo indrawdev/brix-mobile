@@ -11,7 +11,7 @@ import {
 import Card from '../UI/Card';
 import { COLORS, FONTS } from '../../constants';
 
-const PipelineItem = props => {
+const RenewalItem = props => {
 	let TouchableCmp = TouchableOpacity;
 
 	if (Platform.OS === 'android' && Platform.Version >= 21) {
@@ -19,7 +19,7 @@ const PipelineItem = props => {
 	}
 
 	return (
-		<Card style={styles.pipeline}>
+		<Card style={styles.renewal}>
 			<View style={styles.touchable}>
 				<TouchableCmp onPress={props.onSelect} useForeground>
 					<View style={styles.details}>
@@ -34,7 +34,7 @@ const PipelineItem = props => {
 }
 
 const styles = StyleSheet.create({
-	pipeline: {
+	renewal: {
 		margin: 20
 	},
 	touchable: {
@@ -64,4 +64,4 @@ const styles = StyleSheet.create({
 	}
 });
 
-export default PipelineItem;
+export default RenewalItem;
