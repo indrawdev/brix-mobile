@@ -1,15 +1,13 @@
-import Request from '../../models/request';
-import { SET_REQUESTS } from '../../constants/types';
+import Cashless from '../../models/cashless';
+import { SET_CASHLESSES } from '../../constants/types';
 import api from '../../constants/api';
 
-export const fetchRequests = () => {
+export const fetchCashlesses = () => {
 	return async (dispatch, getState) => {
-	
-		const userId = getState().auth.userId;
 		const accessToken = getState().auth.token;
 
 		try {
-			const response = await fetch(api.REQUESTS_URL, {
+			const response = await fetch(api.CASHLESSES_URL, {
 				method: 'GET',
 				headers: {
 					'Authorization': 'Bearer ' + accessToken
@@ -21,20 +19,21 @@ export const fetchRequests = () => {
 			}
 
 			const resData = await response.json();
-			const loadedRequests = [];
+			const loadedCashlesses = [];
 
 			for (const key in resData.data.rows) {
-				loadedRequests.push(
-					new Request(
-						resData.data.rows[key].request_id,
-						resData.data.rows[key].request_name
+				loadedCashlesses.push(
+					new Cashless(
+						resData.data.rows[key].pipeline_id,
+						resData.data.rows[key].pipeline_code,
+						resData.data.rows[key].company_type,
 					)
 				);
 			}
 
 			dispatch({
-				type: SET_REQUESTS,
-				requests: loadedRequests
+				type: SET_CASHLESSES,
+				cashlesses: loadedCashlesses
 			});
 
 		} catch (err) {

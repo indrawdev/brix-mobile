@@ -147,23 +147,6 @@ const Login = props => {
 			>
 				{/* Email */}
 				<View style={{ marginTop: SIZES.padding * 3 }}>
-					{/* <TextInput
-						style={{
-							marginVertical: SIZES.padding,
-							borderBottomColor: COLORS.white,
-							borderBottomWidth: 1,
-							height: 40,
-							color: COLORS.white,
-							...FONTS.body3
-						}}
-						placeholder="Enter Email"
-						placeholderTextColor={COLORS.white}
-						selectionColor={COLORS.white}
-						value={email}
-						onChangeText={value => setEmail(value)}
-						defaultValue={email}
-					/> */}
-
 					<Input
               id="email"
               label="E-Mail"
@@ -179,24 +162,6 @@ const Login = props => {
 
 				{/* Password */}
 				<View style={{ marginTop: SIZES.padding * 2 }}>
-					{/* <TextInput
-						style={{
-							marginVertical: SIZES.padding,
-							borderBottomColor: COLORS.white,
-							borderBottomWidth: 1,
-							height: 40,
-							color: COLORS.white,
-							...FONTS.body3
-						}}
-						placeholder="Enter Password"
-						placeholderTextColor={COLORS.white}
-						selectionColor={COLORS.white}
-						secureTextEntry={!showPassword}
-						value={password}
-						onChangeText={value => setPassword(value)}
-						defaultValue={password}
-					/> */}
-
 					<Input
               id="password"
               label="Password"
@@ -261,9 +226,5 @@ const Login = props => {
 			</KeyboardAvoidingView>
 	);
 };
-
-const mapDispatchToProps = dispatch => ({
-  // userLoginFetch: userInfo => dispatch(userLoginFetch(userInfo))
-})
 
 export default Login;

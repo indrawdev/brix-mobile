@@ -1,15 +1,16 @@
-import Request from '../../models/request';
-import { SET_REQUESTS } from '../../constants/types';
+import Release from '../../models/release';
+import { SET_RELEASES } from '../../constants/types';
 import api from '../../constants/api';
 
-export const fetchRequests = () => {
+
+export const fetchReleases = () => {
 	return async (dispatch, getState) => {
 	
 		const userId = getState().auth.userId;
 		const accessToken = getState().auth.token;
 
 		try {
-			const response = await fetch(api.REQUESTS_URL, {
+			const response = await fetch(api.RELEASES_URL, {
 				method: 'GET',
 				headers: {
 					'Authorization': 'Bearer ' + accessToken
@@ -21,11 +22,11 @@ export const fetchRequests = () => {
 			}
 
 			const resData = await response.json();
-			const loadedRequests = [];
+			const loadedReleases = [];
 
 			for (const key in resData.data.rows) {
-				loadedRequests.push(
-					new Request(
+				loadedReleases.push(
+					new Release(
 						resData.data.rows[key].request_id,
 						resData.data.rows[key].request_name
 					)
@@ -33,8 +34,8 @@ export const fetchRequests = () => {
 			}
 
 			dispatch({
-				type: SET_REQUESTS,
-				requests: loadedRequests
+				type: SET_RELEASES,
+				releases: loadedReleases
 			});
 
 		} catch (err) {

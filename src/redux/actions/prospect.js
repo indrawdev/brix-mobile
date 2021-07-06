@@ -1,15 +1,15 @@
-import Client from '../../models/client';
-import { SET_CLIENTS } from '../../constants/types';
+import Prospect from '../../models/prospect';
+import { SET_PROSPECTS } from '../../constants/types';
 import api from '../../constants/api';
 
-export const fetchClients = () => {
+export const fetchProspects = () => {
 	return async (dispatch, getState) => {
 
 		const userId = getState().auth.userId;
 		const accessToken = getState().auth.token;
 
 		try {
-			const response = await fetch(api.CLIENTS_URL, {
+			const response = await fetch(api.PROSPECTS_URL, {
 				method: 'GET',
 				headers: {
 					'Authorization': 'Bearer ' + accessToken
@@ -21,23 +21,22 @@ export const fetchClients = () => {
 			}
 
 			const resData = await response.json();
-			const loadedClients = [];
+			const loadedProspects = [];
 
 			for (const key in resData.data.rows) {
-				loadedClients.push(
-					new Client(
-						resData.data.rows[key].client_id,
-						resData.data.rows[key].client_name,
-						resData.data.rows[key].client_type,
-						resData.data.rows[key].client_address1,
+				loadedProspects.push(
+					new Prospect(
+						resData.data.rows[key].pipeline_id,
+						resData.data.rows[key].request_name
 					)
 				);
 			}
 
 			dispatch({
-				type: SET_CLIENTS,
-				clients: loadedClients
+				type: SET_PROSPECTS,
+				prospects: loadedProspects
 			});
+
 		} catch (err) {
 			throw err;
 		}

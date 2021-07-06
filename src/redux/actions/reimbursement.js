@@ -1,14 +1,13 @@
-import Pipeline from '../../models/pipeline';
-import { SET_PIPELINES } from '../../constants/types';
+import Reimbursement from '../../models/reimbursement';
+import { SET_REIMBURSEMENTS } from '../../constants/types';
 import api from '../../constants/api';
 
-export const fetchPipelines = () => {
+export const fetchReimbursements = () => {
 	return async (dispatch, getState) => {
-
 		const accessToken = getState().auth.token;
-		
+
 		try {
-			const response = await fetch(api.PIPELINES_URL, {
+			const response = await fetch(api.REIMBURSEMENTS_URL, {
 				method: 'GET',
 				headers: {
 					'Authorization': 'Bearer ' + accessToken
@@ -20,24 +19,23 @@ export const fetchPipelines = () => {
 			}
 
 			const resData = await response.json();
-			const loadedPipelines = [];
+			const loadedReimbursements = [];
 
 			for (const key in resData.data.rows) {
-				loadedPipelines.push(
-					new Pipeline(
+				loadedReimbursements.push(
+					new Reimbursement(
 						resData.data.rows[key].pipeline_id,
 						resData.data.rows[key].pipeline_code,
 						resData.data.rows[key].company_type,
-						resData.data.rows[key].company_name,
-						resData.data.rows[key].head_office_address,
 					)
 				);
 			}
 
 			dispatch({
-				type: SET_PIPELINES,
-				pipelines: loadedPipelines
+				type: SET_REIMBURSEMENTS,
+				reimbursements: loadedReimbursements
 			});
+
 		} catch (err) {
 			throw err;
 		}
