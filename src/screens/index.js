@@ -7,6 +7,8 @@ import Client from './Client';
 import ClientDetail from './ClientDetail';
 import CryptoDetail from './CryptoDetail';
 import Dashboard from './Dashboard';
+import Employee from './Employee';
+import EmployeeDetail from './EmployeeDetail';
 import Home from './Home';
 import Issue from './Issue';
 import Login from './Login';
@@ -46,6 +48,8 @@ export {
 	ClientDetail,
 	CryptoDetail,
 	Dashboard,
+	Employee,
+	EmployeeDetail,
 	Home,
 	Issue,
 	Login,

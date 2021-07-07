@@ -3,6 +3,7 @@ import ReduxThunk from 'redux-thunk';
 
 import authReducer from './reducers/auth';
 import clientsReducer from './reducers/clients';
+import employeesReducer from './reducers/employees';
 import pipelinesReducer from './reducers/pipelines';
 import requestsReducer from './reducers/requests';
 import prospectsReducer from './reducers/prospects';
@@ -14,10 +15,12 @@ import placingsReducer from './reducers/placings';
 import quotationsReducer from './reducers/quotations';
 import reimbursementsReducer from './reducers/reimbusements';
 import cashlessesReducer from './reducers/cashlesses';
+import timesheetsReducer from './reducers/timesheets';
 
 const rootReducer = combineReducers({
 	auth: authReducer,
 	clients: clientsReducer,
+	employees: employeesReducer,
 	pipelines: pipelinesReducer,
 	requests: requestsReducer,
 	propspects: prospectsReducer,
@@ -28,7 +31,8 @@ const rootReducer = combineReducers({
 	placings: placingsReducer,
 	quotations: quotationsReducer,
 	reimbusements: reimbursementsReducer,
-	cashlessesReducer: cashlessesReducer
+	cashlesses: cashlessesReducer,
+	timesheets: timesheetsReducer 
 });
 
 const store = createStore(rootReducer, applyMiddleware(ReduxThunk));

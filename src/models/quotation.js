@@ -1,9 +1,16 @@
 class Quotation {
-	constructor(id, name, code, type) {
+	constructor(id, code, name, type, insured, start, end, policy, brokerage, proposal, insurance) {
 		this.id = id;
-		this.name = name;
 		this.code = code;
+		this.name = name;
 		this.type = type;
+		this.insured = insured;
+		this.start = start;
+		this.end = end;
+		this.policy = policy;
+		this.brokerage = brokerage;
+		this.proposal = proposal;
+		this.insurance = insurance;
   }
 }
 

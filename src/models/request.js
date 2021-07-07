@@ -1,11 +1,11 @@
 class Request {
-	constructor(request_id, pipeline_id, request_code, business_type, type_cover, allocated_budget) {
-		this.request_id = request_id;
-    this.pipeline_id = pipeline_id;
-		this.request_code = request_code;
-		this.business_type = business_type;
-		this.type_cover = type_cover;
-		this.allocated_budget = allocated_budget;
+	constructor(id, code, name, business, type, budget) {
+		this.id = id;
+    this.code = code;
+		this.name = name;
+		this.business = business;
+		this.type = type;
+		this.budget = budget;
   }
 }
 

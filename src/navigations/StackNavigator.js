@@ -11,6 +11,8 @@ import {
 	ClientDetail,
 	CryptoDetail,
 	Dashboard,
+	Employee,
+	EmployeeDetail,
 	Home,
 	Issue,
 	Notification,
@@ -34,12 +36,11 @@ import {
 	Request,
 	RequestDetail,
 	Timesheet,
+	TimesheetDetail,
 	Transaction
 } from '../screens';
 
 import { COLORS, FONTS } from '../constants';
-// import { LogoTitle, HeaderRight } from '../components';
-
 
 const Stack = createStackNavigator();
 
@@ -98,11 +99,19 @@ const ClientStackNavigator = () => {
 	return (
 		<Stack.Navigator screenOptions={screenOptionStyle}>
 			<Stack.Screen name="Client" component={Client} />
-			<Stack.Screen name="ClientDetail" component={ClientDetail} />
+			<Stack.Screen name="Client Detail" component={ClientDetail} />
 		</Stack.Navigator>
 	)
 }
 
+const EmployeeStackNavigator = () => {
+	return (
+		<Stack.Navigator screenOptions={screenOptionStyle}>
+			<Stack.Screen name="Employee" component={Employee} />
+			<Stack.Screen name="Employee Detail" component={EmployeeDetail} />
+		</Stack.Navigator>
+	)
+}
 
 const NotificationStackNavigator = () => {
 	return (
@@ -209,6 +218,13 @@ const CashlessStackNavigator = () => {
 	</Stack.Navigator>
 }
 
+const TimesheetStackNavigator = () => {
+	<Stack.Navigator screenOptions={{ headerShown: false }}>
+		<Stack.Screen name="Timesheet" component={Timesheet} />
+		<Stack.Screen name="Timesheet Detail" component={TimesheetDetail} />
+	</Stack.Navigator>
+}
+
 const AccountStackNavigator = () => {
 	return (
 		<Stack.Navigator screenOptions={screenOptionStyle}>
@@ -230,6 +246,7 @@ const CryptoStackNavigator = () => {
 export {
 	DashboardStackNavigator,
 	ClientStackNavigator,
+	EmployeeStackNavigator,
 	NotificationStackNavigator,
 	AccountStackNavigator,
 	PipelineStackNavigator,
@@ -243,5 +260,6 @@ export {
 	QuotationStackNavigator,
 	ReimbursementStackNavigator,
 	CashlessStackNavigator,
+	TimesheetStackNavigator,
 	CryptoStackNavigator
 }

@@ -1,9 +1,12 @@
 class Proposal {
-	constructor(id, name, code, type) {
+	constructor(id, code, name, type, requester, bizpro, action) {
 		this.id = id;
-		this.name = name;
 		this.code = code;
+		this.name = name;
 		this.type = type;
+		this.requester = requester;
+		this.bizpro = bizpro;
+		this.action = action;
   }
 }
 

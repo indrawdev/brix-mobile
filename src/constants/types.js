@@ -11,6 +11,9 @@ export const AUTHENTICATE = 'AUTHENTICATE';
 // CLIENT
 export const SET_CLIENTS = 'SET_CLIENTS';
 
+// EMPLOYEE
+export const SET_EMPLOYEES = 'SET_EMPLOYEES';
+
 // PIPELINE
 export const SET_PIPELINES = 'SET_PIPELINES';
 
