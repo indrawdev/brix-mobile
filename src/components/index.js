@@ -1,3 +1,4 @@
+import DrawerContent from './DrawerContent';
 import LogoTitle from './LogoTitle';
 import TabIcon from './TabIcon';
 import MenuIcon from './MenuIcon';
@@ -13,6 +14,7 @@ import TextButton from './TextButton';
 import Loading from './Loading';
 
 export {
+	DrawerContent,
 	LogoTitle,
 	TabIcon,
 	MenuIcon,
