@@ -8,9 +8,8 @@ const MainNavigator = props => {
 
   useEffect(() => {
     if (!isAuth) {
-      navRef.current.dispatch(
-        props.navigation.navigate('Login')
-      );
+        // props.navigation.navigate('Login')
+				console.log('Login')
     }
   }, [isAuth]);
 

@@ -3,7 +3,7 @@ import { Text, View, ActivityIndicator, FlatList, Button, StyleSheet } from 'rea
 import { useSelector, useDispatch } from 'react-redux';
 import { LogoTitle, SearchBar } from '../components';
 import * as clientsActions from '../redux/actions/client';
-import { ClientItem } from '../components/user';
+import ClientItem from '../components/user/ClientItem';
 import { COLORS } from '../constants';
 import NavigationDrawer from '../components/NavigationDrawer';
 

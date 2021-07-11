@@ -13,11 +13,23 @@ import { SIZES, FONTS, COLORS } from '../constants';
 import { specialPromoData } from '../shared/dummy';
 import { MenuIcon, StatusTopBar, LogoTitle } from '../components';
 import NavigationDrawer from '../components/NavigationDrawer';
+import * as authActions from '../redux/actions/auth';
 
 const Dashboard = props => {
-	const [isLoading, setLoading] = useState(true);
+	const [isLoading, setIsLoading] = useState(true);
 	const [email, setEmail] = useState('');
 	const [specialPromos, setspecialPromos] = useState(specialPromoData);
+
+	const logoutHandler = async () => {
+		let action = authActions.logout();
+		props.navigation.navigate('Login')
+		try {
+      await dispatch(action);
+    } catch (err) {
+      setError(err.message);
+      setIsLoading(false);
+    }
+	}
 
 	useLayoutEffect(() => {
 		props.navigation.setOptions({
@@ -45,6 +57,7 @@ const Dashboard = props => {
 							alignItems: 'center',
 							backgroundColor: COLORS.white
 						}}
+						onPress={() => logoutHandler()}
 					>
 						<Image
 							source={icons.bell}

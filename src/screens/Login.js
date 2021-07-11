@@ -75,7 +75,8 @@ const Login = props => {
 		
     try {
       await dispatch(action);
-      props.navigation.navigate('Main');
+			props.navigation.navigate('Main');
+			setIsLoading(false);
     } catch (err) {
       setError(err.message);
       setIsLoading(false);

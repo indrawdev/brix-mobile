@@ -3,7 +3,7 @@ import { Text, View, ActivityIndicator, FlatList, Button, StyleSheet } from 'rea
 import { useSelector, useDispatch } from 'react-redux';
 import { LogoTitle, SearchBar } from '../components';
 import * as pipelinesActions from '../redux/actions/pipeline';
-import { PipelineItem } from '../components/user';
+import PipelineItem from '../components/user/PipelineItem';
 import { COLORS } from '../constants';
 
 const Pipeline = props => {
@@ -15,6 +15,7 @@ const Pipeline = props => {
 	const pipelines = useSelector(state => state.pipelines.availablePipelines);
 	
 	const dispatch = useDispatch();
+	
 	const loadPipelines = useCallback(async () => {
 		setError(null);
 		setIsRefreshing(true);

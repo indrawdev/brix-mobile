@@ -1,8 +1,6 @@
 import React from 'react';
 import {
-	createDrawerNavigator,
-	DrawerContentScrollView,
-	DrawerItemList,
+	createDrawerNavigator
 } from '@react-navigation/drawer';
 import BottomTabNavigator from '../navigations/BottomTabNavigator';
 import { DrawerContent } from '../components';
@@ -13,9 +11,10 @@ import {
 
 const Drawer = createDrawerNavigator();
 
-const DrawerNavigator = () => {
+const DrawerNavigator = props => {
+
 	return (
-		<Drawer.Navigator drawerContent={props => <DrawerContent {...props} />}>
+		<Drawer.Navigator>
 			<Drawer.Screen name="Main" component={BottomTabNavigator} />
 			<Drawer.Screen name="Acceptance" component={Acceptance} />
 		</Drawer.Navigator>

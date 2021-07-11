@@ -1,12 +1,15 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import {
+	createDrawerNavigator,
 	DrawerContentScrollView,
 	DrawerItem
 } from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const DrawerContent = () => {
+const Drawer = createDrawerNavigator();
+
+const DrawerContent = props => {
 	return (
 		<View style={{ flex: 1 }}>
 			<DrawerContentScrollView {...props}>

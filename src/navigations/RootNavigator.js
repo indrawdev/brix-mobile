@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Startup, Login } from '../screens';
-import BottomTabNavigator from './BottomTabNavigator';
+import DrawerNavigator from './DrawerNavigator';
 
 const Stack = createStackNavigator();
 
@@ -12,7 +12,7 @@ const RootNavigator = () => {
 			<Stack.Screen name="Login" component={Login} />
 			<Stack.Screen
 				name="Main"
-				component={BottomTabNavigator}
+				component={DrawerNavigator}
 			/>
 		</Stack.Navigator>
 	)
