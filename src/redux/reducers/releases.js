@@ -1,14 +1,14 @@
-import { SET_PROSPECTS } from '../../constants/types';
+import { SET_RELEASES } from '../../constants/types';
 
 const initialState = {
-	availableProspects: [],
+	availableReleases: [],
 };
 
 export default (state = initialState, action) => {
 	switch (action.type) {
-		case SET_PROSPECTS:
+		case SET_RELEASES:
 			return {
-				availableProspects: action.prospects,
+				availableReleases: action.releases,
 			};
 		default:
 			return state;

@@ -9,6 +9,7 @@ import Svg, {
 import {
 	DashboardStackNavigator,
 	ClientStackNavigator,
+	EmployeeStackNavigator,
 	NotificationStackNavigator,
 	AccountStackNavigator
 } from './StackNavigator'
@@ -53,6 +54,16 @@ const BottomTabNavigator = () => {
 					tabBarIcon: ({ focused }) =>
 						<TabIcon
 							focused={focused} icon={icons.pie_chart} label="Clients"
+						/>
+				}}
+			/>
+			<Tab.Screen
+				name="Employee"
+				component={EmployeeStackNavigator}
+				options={{
+					tabBarIcon: ({ focused }) =>
+						<TabIcon
+							focused={focused} icon={icons.info} label="Employee"
 						/>
 				}}
 			/>

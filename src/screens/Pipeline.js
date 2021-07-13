@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { LogoTitle, SearchBar } from '../components';
 import * as pipelinesActions from '../redux/actions/pipeline';
 import PipelineItem from '../components/user/PipelineItem';
-import { COLORS } from '../constants';
+import { COLORS } from '../constants'; 
 
 const Pipeline = props => {
 	const [isLoading, setIsLoading] = useState(false);
@@ -101,8 +101,6 @@ const Pipeline = props => {
 			/>
 		</View>
 	);
-
-
 };
 
 const styles = StyleSheet.create({
