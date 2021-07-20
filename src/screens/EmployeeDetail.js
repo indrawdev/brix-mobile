@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { Text, View, TouchableOpacity } from 'react-native';
+import { Text, View } from 'react-native';
 
 const EmployeeDetail = () => {
 	const [isLoading, setLoading] = useState(true);
 	const [data, setData] = useState([]);
 
 	return (
-		<TouchableOpacity>
-			<View>
-				<Text>Employee Detail</Text>
-			</View>
-		</TouchableOpacity>
+		<View>
+			<Text>Employee Detail</Text>
+		</View>
 	);
 };
 

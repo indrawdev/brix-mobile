@@ -1,10 +1,6 @@
 import React from 'react';
 import { StyleSheet, TouchableOpacity, View, Image, Text } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Icon from 'react-native-vector-icons/FontAwesome5';
-import Svg, {
-	Path
-} from 'react-native-svg';
 
 import {
 	DashboardStackNavigator,
@@ -77,7 +73,6 @@ const BottomTabNavigator = () => {
 						/>
 				}}
 			/>
-
 			<Tab.Screen
 				name="Account"
 				component={AccountStackNavigator}

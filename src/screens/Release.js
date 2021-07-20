@@ -53,7 +53,7 @@ const Release = props => {
 				<Text>An error occurred!</Text>
 				<Button
 					title="Try again"
-					onPress={loadRequests}
+					onPress={loadReleases}
 					color={COLORS.primary}
 				/>
 			</View>

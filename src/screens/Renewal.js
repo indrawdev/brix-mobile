@@ -86,7 +86,7 @@ const Renewal = props => {
 			<FlatList
 				onRefresh={loadRenewals}
 				refreshing={isRefreshing}
-				data={requests}
+				data={renewals}
 				keyExtractor={item => item.request_id}
 				renderItem={itemData => (
 					<RenewalItem

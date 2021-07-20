@@ -4,6 +4,7 @@ import TabIcon from './TabIcon';
 import MenuIcon from './MenuIcon';
 import PriceAlert from './PriceAlert';
 import TransactionHistory from './TransactionHistory';
+import DrawerIcon from './DrawerIcon';
 import HeaderBar from './HeaderBar';
 import HeaderLeft from './HeaderLeft';
 import HeaderRight from './HeaderRight';
@@ -20,6 +21,7 @@ export {
 	MenuIcon,
 	PriceAlert,
 	TransactionHistory,
+	DrawerIcon,
 	HeaderBar,
 	HeaderLeft,
 	HeaderRight,

@@ -47,21 +47,21 @@ const formReducer = (state, action) => {
 const Login = props => {
 	const [isLoading, setIsLoading] = useState(false);
 	const [error, setError] = useState();
-	
+
 	const dispatch = useDispatch();
 
 	const [formState, dispatchFormState] = useReducer(formReducer, {
-    inputValues: {
-      email: '',
-      password: ''
-    },
-    inputValidities: {
-      email: false,
-      password: false
-    },
-    formIsValid: false
+		inputValues: {
+			email: '',
+			password: ''
+		},
+		inputValidities: {
+			email: false,
+			password: false
+		},
+		formIsValid: false
 	});
-	
+
 	const [showPassword, setShowPassword] = useState(false);
 
 	const loginHandler = async () => {
@@ -72,34 +72,34 @@ const Login = props => {
 
 		setError(null);
 		setIsLoading(true);
-		
-    try {
-      await dispatch(action);
+
+		try {
+			await dispatch(action);
 			props.navigation.navigate('Main');
 			setIsLoading(false);
-    } catch (err) {
-      setError(err.message);
-      setIsLoading(false);
-    }
+		} catch (err) {
+			setError(err.message);
+			setIsLoading(false);
+		}
 	}
 
 	const inputChangeHandler = useCallback(
-    (inputIdentifier, inputValue, inputValidity) => {
-      dispatchFormState({
-        type: FORM_INPUT_UPDATE,
-        value: inputValue,
-        isValid: inputValidity,
-        input: inputIdentifier
-      });
-    },
-    [dispatchFormState]
+		(inputIdentifier, inputValue, inputValidity) => {
+			dispatchFormState({
+				type: FORM_INPUT_UPDATE,
+				value: inputValue,
+				isValid: inputValidity,
+				input: inputIdentifier
+			});
+		},
+		[dispatchFormState]
 	);
-	
+
 	useEffect(() => {
-    if (error) {
-      Alert.alert('Error', error, [{ text: 'Okay' }]);
-    }
-  }, [error]);
+		if (error) {
+			Alert.alert('Error', error, [{ text: 'OK' }]);
+		}
+	}, [error]);
 
 	function renderHeader() {
 		return (
@@ -149,32 +149,32 @@ const Login = props => {
 				{/* Email */}
 				<View style={{ marginTop: SIZES.padding * 3 }}>
 					<Input
-              id="email"
-              label="E-Mail"
-              keyboardType="email-address"
-              required
-              email
-              autoCapitalize="none"
-              errorText="Please enter a valid email address."
-              onInputChange={inputChangeHandler}
-              initialValue=""
-            />
+						id="email"
+						label="E-Mail"
+						keyboardType="email-address"
+						required
+						email
+						autoCapitalize="none"
+						errorText="Please enter a valid email address."
+						onInputChange={inputChangeHandler}
+						initialValue=""
+					/>
 				</View>
 
 				{/* Password */}
 				<View style={{ marginTop: SIZES.padding * 2 }}>
 					<Input
-              id="password"
-              label="Password"
-              keyboardType="default"
-              secureTextEntry
-              required
-              minLength={5}
-              autoCapitalize="none"
-              errorText="Please enter a valid password."
-              onInputChange={inputChangeHandler}
-              initialValue=""
-            />
+						id="password"
+						label="Password"
+						keyboardType="default"
+						secureTextEntry
+						required
+						minLength={5}
+						autoCapitalize="none"
+						errorText="Please enter a valid password."
+						onInputChange={inputChangeHandler}
+						initialValue=""
+					/>
 
 				</View>
 			</View>
@@ -206,25 +206,25 @@ const Login = props => {
 
 
 	return (
-			<KeyboardAvoidingView
-				behavior={Platform.OS === "ios" ? "padding" : null}
+		<KeyboardAvoidingView
+			behavior={Platform.OS === "ios" ? "padding" : null}
+			style={{ flex: 1 }}
+		>
+			<StatusTopBar
+				hidden={false}
+			/>
+			<LinearGradient
+				colors={[COLORS.white, COLORS.white]}
 				style={{ flex: 1 }}
 			>
-				<StatusTopBar
-					hidden={false}
-				/>
-				<LinearGradient
-					colors={[COLORS.white, COLORS.white]}
-					style={{ flex: 1 }}
-				>
-					<ScrollView>
-						{renderHeader()}
-						{renderLogo()}
-						{renderForm() }
-						{renderButton()}
-					</ScrollView>
-				</LinearGradient>
-			</KeyboardAvoidingView>
+				<ScrollView>
+					{renderHeader()}
+					{renderLogo()}
+					{renderForm()}
+					{renderButton()}
+				</ScrollView>
+			</LinearGradient>
+		</KeyboardAvoidingView>
 	);
 };
 

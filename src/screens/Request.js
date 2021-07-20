@@ -10,7 +10,7 @@ const Request = props => {
 	const [isLoading, setIsLoading] = useState(false);
 	const [isRefreshing, setIsRefreshing] = useState(false);
 	const [error, setError] = useState();
-	const [search, setSearch] = useState(''); 
+	const [search, setSearch] = useState('');
 
 	const requests = useSelector(state => state.requests.availableRequests);
 

@@ -8,8 +8,7 @@ import {
 	StyleSheet,
 	Image,
 	FlatList,
-	LogBox,
-	ActivityIndicator
+	LogBox
 } from 'react-native';
 import icons from '../constants/icons';
 import images from '../constants/images';

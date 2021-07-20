@@ -5,7 +5,6 @@ import { LogoTitle, SearchBar } from '../components';
 import * as employeesActions from '../redux/actions/employee';
 import EmployeeItem from '../components/user/EmployeeItem';
 import { COLORS } from '../constants';
-import NavigationDrawer from '../components/NavigationDrawer'; 
 
 const Employee = props => {
 	const [isLoading, setIsLoading] = useState(false);

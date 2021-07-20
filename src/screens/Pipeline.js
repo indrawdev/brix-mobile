@@ -4,7 +4,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { LogoTitle, SearchBar } from '../components';
 import * as pipelinesActions from '../redux/actions/pipeline';
 import PipelineItem from '../components/user/PipelineItem';
-import { COLORS } from '../constants'; 
+import { COLORS } from '../constants';
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Pipeline = props => {
 	const [isLoading, setIsLoading] = useState(false);
@@ -13,9 +14,9 @@ const Pipeline = props => {
 	const [search, setSearch] = useState('');
 
 	const pipelines = useSelector(state => state.pipelines.availablePipelines);
-	
+
 	const dispatch = useDispatch();
-	
+
 	const loadPipelines = useCallback(async () => {
 		setError(null);
 		setIsRefreshing(true);
@@ -47,13 +48,22 @@ const Pipeline = props => {
 		})
 	}
 
+	const getData = async () => {
+		try {
+			const jsonValue = await AsyncStorage.getItem('userData')
+			return jsonValue != null ? JSON.parse(jsonValue) : null;
+		} catch (e) {
+			console.log(e)
+		}
+	}
+
 	if (error) {
 		return (
 			<View style={styles.centered}>
 				<Text>An error occurred!</Text>
 				<Button
 					title="Try again"
-					onPress={loadPipelines}
+					onPress={getData}
 					color={COLORS.primary}
 				/>
 			</View>
